@@ -248,7 +248,7 @@ async function installApp(url,params) {
         name: json.name,
         icon: json.icon,
         onclick: function() {
-          openApp(thouApp, thouUrl, json.encodedUrl);
+          openApp(thouApp, thouUrl, thouEnc);
         }
       }
       appData.push(myAppData);
