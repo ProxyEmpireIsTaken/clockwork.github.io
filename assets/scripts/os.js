@@ -61,7 +61,7 @@ function check(str) {
 try {
   check("st")
 } catch (e) {
-  alert("ErROR");
+  alert("ERROR");
   alert(e);
 }
 
