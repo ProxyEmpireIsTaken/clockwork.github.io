@@ -373,16 +373,16 @@ a:hover {
 .finder-box {
   position: fixed;
   left: 50vw;
-  bottom: 32px;
+  bottom: 36px;
   padding: 1px;
   height: 100px;
   transform: translateX(-50%);
   border: 1px solid gray;
   background-color: #222;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   color: white;
-  width: 256px;
-  max-width: 256px;
+  width: 240px;
+  max-width: 240px;
   text-align: left;
   z-index: 99999;
 }
