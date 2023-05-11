@@ -789,7 +789,7 @@ document.body.onkeydown = function(e) {
   }
 };
 finder.addEventListener("focusout", function() {
-  setTimeout(50, function(){
+  setTimeout(50, function() {
     finder.style = "display: none;";
     finderBox.style = "display: none;";
   })
