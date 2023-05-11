@@ -866,7 +866,6 @@ function checkFinder(str) {
     finderBox.innerHTML = "No results - try a less specific search"
   }
 }
-checkFinder(finder.value.toLowerCase());
 finder.oninput = function() {
   try {
     checkFinder(this.value.toLowerCase());
