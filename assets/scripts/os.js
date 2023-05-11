@@ -823,7 +823,11 @@ function checkFinder(str) {
   }
 }
 finder.oninput = function() {
-  checkFinder(this.value);
+  try {
+    checkFinder(this.value);
+  } catch (e) {
+    alert(e);
+  }
 }
 try {
   checkFinder("ap")
