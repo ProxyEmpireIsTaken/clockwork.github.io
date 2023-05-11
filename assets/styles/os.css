@@ -374,7 +374,6 @@ a:hover {
   position: fixed;
   left: 50vw;
   bottom: 36px;
-  padding: 1px;
   height: 100px;
   transform: translateX(-50%);
   border: 1px solid gray;
@@ -387,4 +386,12 @@ a:hover {
   z-index: 99999;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.finder-box {
+  position: fixed;
+  padding: 5px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid gray;
+
 }
