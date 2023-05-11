@@ -41,7 +41,7 @@ contextMenu.style.display = "none";
 // The stuff that you can search up using the Finder
 const searchables = [
   {
-    searchText: ["store","app","theme"],
+    searchText: ["store","app store","theme store","shop"],
     name: "Clockwork Store",
     icon: "none",
     onclick: function(){
