@@ -362,3 +362,6 @@ a:hover {
   text-align: left;
   z-index: 99999;
 }
+.finder:focus {
+  outline: none;
+}
