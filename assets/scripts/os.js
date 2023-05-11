@@ -240,18 +240,11 @@ async function installApp(url,params) {
         encodedUrl: json.encodedUrl,
         permissions: json.permissions,
       }
-      var evaler = `openApp('${url}','${json.url}',${json.encodedUrl})`;
       var myFinderData = {
         searchText: [json.name.toLowerCase()],
         name: json.name,
         icon: json.icon,
-        onclick: function() {
-          try {
-            eval(evaler);
-          } catch(e) {
-            alert(e);
-          }
-        }
+        onclick: `openApp('${url}','${json.url}',${json.encodedUrl})`
       }
       appData.push(myAppData);
       searchables.push(myFinderData);
@@ -841,7 +834,11 @@ function checkFinder(str) {
     // fucking hell
     
     var func = match[i].onclick;
-    div.addEventListener("click", func);
+    if (typeof func == "string") {
+      div.addEventListener("click", Function(func));
+    } else {
+      div.addEventListener("click", func);
+    }
     div.addEventListener("click", function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
