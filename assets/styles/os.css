@@ -361,13 +361,21 @@ a:hover {
   max-width: 256px;
   text-align: left;
   z-index: 99999;
-
+  filter: opacity(100%);
+  transition: 0.2s;
+}
+.finder.invisible {
+  filter: opacity(0%);
   transition: 0.2s;
 }
 .finder:focus {
   outline: none;
 
   border: 1px solid white;
+  transition: 0.2s;
+}
+.finder-box.invisible {
+  filter: opacity(0%);
   transition: 0.2s;
 }
 .finder-box {
@@ -386,6 +394,8 @@ a:hover {
   z-index: 99999;
   overflow-y: auto;
   overflow-x: hidden;
+  filter: opacity(100%);
+  transition: 0.2s;
 }
 
 .finder-box > div {
