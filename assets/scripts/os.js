@@ -807,9 +807,13 @@ function checkFinder(str) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
     div.addEventListener("keydown", function() {
-      finder.style = "display: none;";
-      finderBox.style = "display: none;";
-      eval(match[i].onclick.toString());
+      try {
+        finder.style = "display: none;";
+        finderBox.style = "display: none;";
+        match[i].onclick()
+      } catch (err) {
+        alert(err);
+      }
     })
     finderBox.appendChild(div);
     ++i;
