@@ -788,10 +788,10 @@ document.body.onkeydown = function(e) {
     finder.focus();
   }
 };
-finder.onfocusout = function() {
+finder.addEventListener("focusout", function() {
   finder.style = "display: none;";
   finderBox.style = "display: none;";
-}
+});
 
 // finder system
 function checkFinder(str) {
