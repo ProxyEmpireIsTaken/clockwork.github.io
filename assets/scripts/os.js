@@ -811,7 +811,8 @@ function checkFinder(str) {
     // never have i been so inclined to inflict such violence onto a piece of code before
     // fucking hell
     
-    div.addEventListener("click", match[i].onclick);
+    var func = match[i].onclick;
+    div.addEventListener("click", func);
     div.addEventListener("click", function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
