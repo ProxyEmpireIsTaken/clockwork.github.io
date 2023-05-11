@@ -39,7 +39,7 @@ contextMenu.style.display = "none";
 // The stuff that you can search up using the Finder
 const searchables = [
   {
-    searchText: ["store"],
+    searchText: ["store","app","theme"],
     name: "Clockwork Store",
     icon: "none",
   }
@@ -68,7 +68,7 @@ function checkFinder(str) {
   }
 }
 try {
-  checkFinder("str")
+  checkFinder("ap")
 } catch (e) {
   alert("ERROR");
   alert(e);
