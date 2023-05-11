@@ -42,7 +42,7 @@ const searchables = [
     searchText: ["store","app","app","theme"],
     name: "Clockwork Store",
     icon: "none",
-    onclick: "",
+    onclick: function(){openApp("/assets/apps/store.json")},
   },
   {
     searchText: ["app"],
@@ -67,7 +67,10 @@ function checkFinder(str) {
   const box = document.querySelector(".finder-box");
   box.innerHTML = "";
   for (let i=0; i<match.length&&i<12;) {
-    box.innerHTML += `${match[i].name}<br>`
+    var div = document.createElement("div");
+    div.innerHTML = match[i].name
+    div.onclick = match[i].onclick
+    box.appendChild(div);
     ++i;
   }
   if (box.innerHTML == "") {
