@@ -36,6 +36,30 @@ document.getElementById("versiontxt").innerText = version;
 
 contextMenu.style.display = "none";
 
+// The stuff that you can search up using the Finder
+const searchables = [
+  {
+    searchText: "store",
+    name: "Clockwork Store",
+    icon: "none",
+  }
+]
+function check(str) {
+  var match = [];
+  for (let i=0; i<searchables.length;) {
+    var sub = searchables[i].searchText.slice(0, str.length)
+    if (str.contains(sub)) {
+      match.push(searchables[i])
+    }
+    ++i;
+  }
+  for (let i=0; i<match.length;) {
+    document.querySelector(".finder-box").innerHTML += `${match[i].name}<br>`
+    ++i;
+  }
+}
+check("st")
+
 // ULTRAVIOLET ENCODING AND DECODING
 // THIS IS REQUIRED FOR USING A PROXY
 function encodeUV(str){
