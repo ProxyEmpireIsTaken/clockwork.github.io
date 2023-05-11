@@ -240,7 +240,14 @@ async function installApp(url,params) {
         encodedUrl: json.encodedUrl,
         permissions: json.permissions,
       }
+      var myFinderData = {
+        searchText: [json.name.toLowerCase()],
+        name: json.name,
+        icon: json.icon,
+        onclick: new Function(`openApp('${url}','${json.url}',${json.encodedUrl})`),
+      }
       appData.push(myAppData);
+      searchables.push(myFinderData);
       
 	    appBar.innerHTML += `<btn id="appbar:${url}" 
       onclick="openApp('${url}','${json.url}',${json.encodedUrl})" 
