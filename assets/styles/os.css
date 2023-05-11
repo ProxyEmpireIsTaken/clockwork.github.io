@@ -358,4 +358,5 @@ a:hover {
   border-radius: 8px;
   color: white;
   width: 256px;
+  max-width: 256px;
 }
