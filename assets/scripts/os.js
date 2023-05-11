@@ -826,7 +826,13 @@ function checkFinder(str) {
   finderBox.innerHTML = "";
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
-    div.innerHTML = `${match[i].name}<img src="/assets/clockwork/settings.png">`
+    div.innerHTML = `${match[i].name}${(function(){
+      if (match[i].icon) {
+        return `<img src="${match[i].icon}">`;
+      } else {
+        return "";
+      }
+    })()}`
 
     // holy fucking shit WORK DAMN YOU
     // never have i been so inclined to inflict such violence onto a piece of code before
