@@ -792,7 +792,7 @@ finder.addEventListener("focusout", function() {
   setTimeout(function() {
     finder.style = "display: none;";
     finderBox.style = "display: none;";
-  }, 50)
+  }, 100)
 });
 
 // finder system
