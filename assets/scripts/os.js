@@ -688,6 +688,8 @@ document.querySelector("body").addEventListener("click", (event) => {
     openNotificationPanel();
   }
   if (!finderBox.contains(event.target.offsetParent)) {
+    finder.className = "finder invisible";
+    finderBox.className = "finder-box invisible";
     setTimeout(function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
@@ -804,6 +806,8 @@ window.addEventListener('message', function(event) {
 document.body.onkeydown = function(e) { 
   if (e.ctrlKey && e.key == "/") {
     e.preventDefault();
+    finder.className = "finder"
+    finderBox.className = "finder-box"
     finder.style = "display: block;"
     finderBox.style = "display: block;"
     finder.focus();
@@ -841,8 +845,12 @@ function checkFinder(str) {
       div.addEventListener("click", func);
     }
     div.addEventListener("click", function() {
-      finder.style = "display: none;";
-      finderBox.style = "display: none;";
+      finder.className = "finder invisible";
+      finderBox.className = "finder-box invisible";
+      setTimeout(function() {
+        finder.style = "display: none;";
+        finderBox.style = "display: none;";
+      }, 250);
       finder.blur();
     });
     finderBox.appendChild(div);
