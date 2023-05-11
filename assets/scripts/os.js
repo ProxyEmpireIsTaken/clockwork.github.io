@@ -778,6 +778,15 @@ window.addEventListener('message', function(event) {
   }
 });
 
+// onkeypress
+
+document.body.onkeydown = function(e) { 
+  if (e.key == "/") {
+    e.preventDefault();
+    alert("Finder");
+  }
+};
+
 // finder system
 function checkFinder(str) {
   var match = [];
