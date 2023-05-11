@@ -53,6 +53,7 @@ function checkFinder(str) {
         match.push(searchables[i]);
         break;
       }
+      ++i2;
     }
     ++i;
   }
