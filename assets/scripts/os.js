@@ -807,6 +807,7 @@ function checkFinder(str) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
     div.onkeydown = match[i].onclick.toString();
+    alert("("+match[i].onclick.toString()+")()")
     /*div.addEventListener("keydown", function() {
       finder.style = "display: none;"
       finderBox.style = "display: none;"
