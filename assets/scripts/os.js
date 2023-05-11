@@ -808,10 +808,10 @@ function checkFinder(str) {
     div.innerHTML = match[i].name
     // holy fucking shit WORK DAMN YOU
     // never have i been so inclined to inflict such violence onto a piece of code before
-    div.onkeydown = function() {
-      finder.style = "display: none;"
-      finderBox.style = "display: none;"
-      //eval("("+match[i].onclick.toString()+")()")
+    div.onclick = function() {
+      finder.style = "display: none;";
+      finderBox.style = "display: none;";
+      match[i].onclick();
     };
     finderBox.appendChild(div);
     ++i;
