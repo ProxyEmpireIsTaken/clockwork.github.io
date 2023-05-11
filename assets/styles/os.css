@@ -388,10 +388,8 @@ a:hover {
   overflow-y: hidden;
 }
 
-.finder-box {
-  position: fixed;
+.finder-box > div {
   padding: 5px;
   border-radius: 8px 8px 0 0;
   border-bottom: 1px solid gray;
-
 }
