@@ -53,11 +53,19 @@ const searchables = [
     },
   },
   {
-    searchText: ["apps","manage apps"],
+    searchText: ["apps","manage apps","uninstall apps"],
     name: "Manage Apps",
     icon: "none",
     onclick: function(){
       openApp('sys_settings_apps');
+    },
+  },
+  {
+    searchText: ["themes","manage themes","uninstall themes","reorder themes","set themes"],
+    name: "Manage Themes",
+    icon: "none",
+    onclick: function(){
+      openApp('sys_settings_themes');
     },
   },
 ]
