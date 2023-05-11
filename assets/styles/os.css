@@ -361,7 +361,12 @@ a:hover {
   max-width: 256px;
   text-align: left;
   z-index: 99999;
+
+  transition: 0.2s;
 }
 .finder:focus {
   outline: none;
+
+  border: 1px solid white;
+  transition: 0.2s;
 }
