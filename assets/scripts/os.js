@@ -806,14 +806,11 @@ function checkFinder(str) {
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
+    var func = match[i].onclick;
     div.addEventListener("keydown", function() {
-      try {
-        finder.style = "display: none;";
-        finderBox.style = "display: none;";
-        match[i].onclick()
-      } catch (err) {
-        alert(err);
-      }
+      finder.style = "display: none;";
+      finderBox.style = "display: none;";
+      func();
     })
     finderBox.appendChild(div);
     ++i;
