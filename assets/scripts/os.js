@@ -228,8 +228,15 @@ async function installApp(url,params) {
         encodedUrl: json.encodedUrl,
         permissions: json.permissions,
       }
+      var finderTerms = json?.finderTerms;
       var myFinderData = {
-        searchText: [json.name.toLowerCase()],
+        searchText: (function(){
+          if (finderTerms == null) {
+            return [json.name.toLowerCase()];
+          } else {
+            return [json.name.toLowerCase()].concat(finderTerms);
+          }
+        })(),
         name: json.name,
         icon: json.icon,
         onclick: `openApp('${url}','${json.url}',${json.encodedUrl});`
