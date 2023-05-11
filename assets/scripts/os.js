@@ -835,7 +835,8 @@ function checkFinder(str) {
     
     var func = match[i].onclick;
     if (typeof func == "string") {
-      div.addEventListener("click", Function(func));
+      alert(func);
+      div.addEventListener("click", Function(`eval(${func})`));
     } else {
       div.addEventListener("click", func);
     }
