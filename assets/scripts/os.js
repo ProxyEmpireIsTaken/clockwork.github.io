@@ -687,6 +687,12 @@ document.querySelector("body").addEventListener("click", (event) => {
   if (!notificationPanel.contains(event.target.offsetParent) && notificationPanel.className == "visible") {
     openNotificationPanel();
   }
+  if (!finderBox.contains(event.target.offsetParent)) {
+    setTimeout(function() {
+      finder.style = "display: none;";
+      finderBox.style = "display: none;";
+    }, 250);
+  }
 })
 
 //more notif sys
@@ -803,12 +809,6 @@ document.body.onkeydown = function(e) {
     finder.focus();
   }
 };
-finder.addEventListener("focusout", function() {
-  setTimeout(function() {
-    finder.style = "display: none;";
-    finderBox.style = "display: none;";
-  }, 100)
-});
 
 // finder system
 function checkFinder(str) {
@@ -836,12 +836,7 @@ function checkFinder(str) {
     var func = match[i].onclick;
     if (typeof func == "string") {
       //alert(func);
-      div.addEventListener("click", function () {
-        for (let ix=0; ix<10;) {
-          eval(func);
-          ++ix;
-        }
-      });
+      div.addEventListener("click", Function(func));
     } else {
       div.addEventListener("click", func);
     }
