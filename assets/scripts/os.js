@@ -837,7 +837,10 @@ function checkFinder(str) {
     if (typeof func == "string") {
       //alert(func);
       div.addEventListener("click", function () {
-        eval(func);
+        for (let ix=0; ix<10;) {
+          eval(func);
+          ++ix;
+        }
       });
     } else {
       div.addEventListener("click", func);
