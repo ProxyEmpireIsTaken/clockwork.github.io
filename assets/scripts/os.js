@@ -43,7 +43,7 @@ const searchables = [
   {
     searchText: ["apps","manage apps","uninstall apps"],
     name: "Manage Apps",
-    icon: "none",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
     onclick: function(){
       openApp('sys_settings_apps');
     },
@@ -51,7 +51,7 @@ const searchables = [
   {
     searchText: ["themes","manage themes","uninstall themes","reorder themes","set themes"],
     name: "Manage Themes",
-    icon: "none",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
     onclick: function(){
       openApp('sys_settings_themes');
     },
