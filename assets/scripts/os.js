@@ -2,6 +2,8 @@ const contextMenu = document.getElementById("contextmenu")
 const appPanel = document.getElementById("apppanel");
 const appBar = document.getElementById("appbar");
 const loadBar = document.getElementById("cw-load-bar");
+const finder = document.querySelector(".finder");
+const finderBox = document.querySelector(".finder-box");
 const yes = true;
 const no = false;
 
@@ -47,48 +49,19 @@ const searchables = [
         "/assets/apps/store.json",
         "NOWWITHHDMI2.1(V1.1.0BETA)#l08#l20#l20#l16#l19#bs22#bs28#bs28#l03#l12#l15#l03#l11#l23#l15#l18#l11#bs16#l19#l20#l15#l18#l05#bs13#l07#l12#l09#l20#l03#l08#bs13#l13#l05#bs28#l22#num02#bs28",
         true
-      )
+      );
     },
   },
   {
-    searchText: ["app"],
-    name: "Clockwork Store 2",
+    searchText: ["apps","manage apps"],
+    name: "Manage Apps",
     icon: "none",
-    onclick: "",
-  }
+    onclick: function(){
+      openApp('sys_settings_apps');
+    },
+  },
 ]
-function checkFinder(str) {
-  var match = [];
-  for (let i=0; i<searchables.length;) {
-    for (let i2=0; i2<searchables[i].searchText.length;) {
-      var sub = str.slice(0, str.length)
-      if (searchables[i].searchText[i2].includes(sub)) {
-        match.push(searchables[i]);
-        break;
-      }
-      ++i2;
-    }
-    ++i;
-  }
-  const box = document.querySelector(".finder-box");
-  box.innerHTML = "";
-  for (let i=0; i<match.length&&i<12;) {
-    var div = document.createElement("div");
-    div.innerHTML = match[i].name
-    div.onclick = match[i].onclick
-    box.appendChild(div);
-    ++i;
-  }
-  if (box.innerHTML == "") {
-    box.innerHTML = "No results - try a less specific search"
-  }
-}
-try {
-  checkFinder("ap")
-} catch (e) {
-  alert("ERROR");
-  alert(e);
-}
+
 
 // ULTRAVIOLET ENCODING AND DECODING
 // THIS IS REQUIRED FOR USING A PROXY
@@ -446,11 +419,13 @@ function uninstallApp(app) {
   }
   var entry = appData.find(function(o) {
     return o.url == app
-  })
+  });
+
   if (entry.permissions.includes("noUninstall")) {
     alert("Cannot uninstall app!");
     throw "noUninstallAppError";
   }
+
   var ask = confirm("Are you sure you want to uninstall this app?");
   if (ask == true) {
     let index = apps.indexOf(app);
@@ -802,3 +777,39 @@ window.addEventListener('message', function(event) {
     }
   }
 });
+
+// finder system
+function checkFinder(str) {
+  var match = [];
+  for (let i=0; i<searchables.length;) {
+    for (let i2=0; i2<searchables[i].searchText.length;) {
+      var sub = str.slice(0, str.length)
+      if (searchables[i].searchText[i2].includes(sub)) {
+        match.push(searchables[i]);
+        break;
+      }
+      ++i2;
+    }
+    ++i;
+  }
+  finderBox.innerHTML = "";
+  for (let i=0; i<match.length&&i<12;) {
+    var div = document.createElement("div");
+    div.innerHTML = match[i].name
+    div.onclick = match[i].onclick
+    finderBox.appendChild(div);
+    ++i;
+  }
+  if (finderBox.innerHTML == "") {
+    finderBox.innerHTML = "No results - try a less specific search"
+  }
+}
+finder.oninput = function() {
+  checkFinder(this.value);
+}
+try {
+  checkFinder("ap")
+} catch (e) {
+  alert("ERROR");
+  alert(e);
+}
