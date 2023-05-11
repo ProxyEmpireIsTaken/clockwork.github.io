@@ -368,12 +368,6 @@ a:hover {
   filter: opacity(0%);
   transition: 0.2s;
 }
-.finder:focus {
-  outline: none;
-
-  border: 1px solid white;
-  transition: 0.2s;
-}
 .finder-box.invisible {
   filter: opacity(0%);
   transition: 0.2s;
