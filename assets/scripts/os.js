@@ -425,7 +425,7 @@ function uninstallApp(app) {
   });
 
   if (entry.permissions.includes("noUninstall")) {
-    alert("Cannot uninstall app!");
+    alert("This is a system app, which means you cannot uninstall it.");
     throw "noUninstallAppError";
   }
 
