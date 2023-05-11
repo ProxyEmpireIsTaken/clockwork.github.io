@@ -30,7 +30,7 @@ var themes = null;
 
 // PATCH is backwards-compatible changes for security and bug fixes only
 
-var version = "2.0.0.0-beta10";
+var version = "2.0.0.0-beta11";
 
 document.getElementById("versiontxt").innerText = version;
 
