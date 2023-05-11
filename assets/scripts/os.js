@@ -807,11 +807,12 @@ function checkFinder(str) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
     // holy fucking shit WORK DAMN YOU
-    div.addEventListener("keydown", function() {
+    // never have i been so inclined to inflict such violence onto a piece of code before
+    div.onkeydown = function() {
       finder.style = "display: none;"
       finderBox.style = "display: none;"
       //eval("("+match[i].onclick.toString()+")()")
-    });
+    };
     finderBox.appendChild(div);
     ++i;
   }
