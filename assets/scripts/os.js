@@ -244,7 +244,9 @@ async function installApp(url,params) {
         searchText: [json.name.toLowerCase()],
         name: json.name,
         icon: json.icon,
-        onclick: new Function(`openApp('${url}','${json.url}',${json.encodedUrl})`),
+        onclick: function(){
+          openApp(url, json.url, json.encodedUrl);
+        },
       }
       appData.push(myAppData);
       searchables.push(myFinderData);
