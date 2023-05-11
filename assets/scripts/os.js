@@ -42,7 +42,13 @@ const searchables = [
     searchText: ["store","app","app","theme"],
     name: "Clockwork Store",
     icon: "none",
-    onclick: function(){openApp("/assets/apps/store.json")},
+    onclick: function(){
+      openApp(
+        "/assets/apps/store.json",
+        "NOWWITHHDMI2.1(V1.1.0BETA)#l08#l20#l20#l16#l19#bs22#bs28#bs28#l03#l12#l15#l03#l11#l23#l15#l18#l11#bs16#l19#l20#l15#l18#l05#bs13#l07#l12#l09#l20#l03#l08#bs13#l13#l05#bs28#l22#num02#bs28",
+        true
+      )
+    },
   },
   {
     searchText: ["app"],
