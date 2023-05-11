@@ -811,7 +811,7 @@ function checkFinder(str) {
     div.onclick = function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
-      match[i].onclick();
+      eval(`(${match[i].onclick.toString()})()`);
     };
     finderBox.appendChild(div);
     ++i;
