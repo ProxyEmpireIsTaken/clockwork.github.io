@@ -39,7 +39,7 @@ contextMenu.style.display = "none";
 // The stuff that you can search up using the Finder
 const searchables = [
   {
-    searchText: "store",
+    searchText: ["store"],
     name: "Clockwork Store",
     icon: "none",
   }
@@ -47,20 +47,23 @@ const searchables = [
 function checkFinder(str) {
   var match = [];
   for (let i=0; i<searchables.length;) {
-    var sub = str.slice(0, str.length)
-    if (searchables[i].searchText.includes(sub)) {
-      match.push(searchables[i]);
+    for (let i2=0; i2<searchables[i].searchText.length;) {
+      var sub = str.slice(0, str.length)
+      if (searchables[i].searchText[i2].includes(sub)) {
+        match.push(searchables[i]);
+        break;
+      }
     }
     ++i;
   }
   const box = document.querySelector(".finder-box");
   box.innerHTML = "";
-  for (let i=0; i<match.length;) {
+  for (let i=0; i<match.length&&i<12;) {
     box.innerHTML += `${match[i].name}<br>`
     ++i;
   }
   if (box.innerHTML == "") {
-    box.innerHTML = "No results..."
+    box.innerHTML = "No results - try a less specific search"
   }
 }
 try {
