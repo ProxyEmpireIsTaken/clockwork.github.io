@@ -47,8 +47,8 @@ const searchables = [
 function check(str) {
   var match = [];
   for (let i=0; i<searchables.length;) {
-    var sub = searchables[i].searchText.slice(0, str.length)
-    if (str.contains(sub)) {
+    var sub = str.slice(0, str.length)
+    if (searchables[i].searchText.contains(sub)) {
       match.push(searchables[i]);
     }
     ++i;
