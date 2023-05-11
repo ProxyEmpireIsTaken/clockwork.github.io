@@ -42,6 +42,13 @@ const searchables = [
     searchText: ["store","app","app","theme"],
     name: "Clockwork Store",
     icon: "none",
+    onclick: "",
+  },
+  {
+    searchText: ["app"],
+    name: "Clockwork Store 2",
+    icon: "none",
+    onclick: "",
   }
 ]
 function checkFinder(str) {
