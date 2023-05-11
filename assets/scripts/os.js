@@ -246,7 +246,11 @@ async function installApp(url,params) {
         name: json.name,
         icon: json.icon,
         onclick: function() {
-          eval(evaler);
+          try {
+            eval(evaler);
+          } catch(e) {
+            alert(e);
+          }
         }
       }
       appData.push(myAppData);
