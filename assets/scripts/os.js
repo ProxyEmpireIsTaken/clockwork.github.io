@@ -785,8 +785,13 @@ document.body.onkeydown = function(e) {
     e.preventDefault();
     finder.style = "display: block;"
     finderBox.style = "display: block;"
+    finder.focus();
   }
 };
+finder.onfocusout = function() {
+  finder.style = "display: none;";
+  finderBox.style = "display: none;";
+}
 
 // finder system
 function checkFinder(str) {
@@ -816,6 +821,7 @@ function checkFinder(str) {
     div.addEventListener("click", function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
+      finder.blur();
     });
     finderBox.appendChild(div);
     ++i;
