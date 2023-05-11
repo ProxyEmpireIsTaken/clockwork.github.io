@@ -842,14 +842,8 @@ function checkFinder(str) {
 }
 finder.oninput = function() {
   try {
-    checkFinder(this.value);
+    checkFinder(this.value.toLowerCase());
   } catch (e) {
     alert(e);
   }
-}
-try {
-  checkFinder("ap")
-} catch (e) {
-  alert("ERROR");
-  alert(e);
 }
