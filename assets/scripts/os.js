@@ -39,7 +39,7 @@ contextMenu.style.display = "none";
 // The stuff that you can search up using the Finder
 const searchables = [
   {
-    searchText: ["store","app","app","theme"],
+    searchText: ["store","app","theme"],
     name: "Clockwork Store",
     icon: "none",
     onclick: function(){
@@ -331,6 +331,10 @@ async function promptInstallApp(url,params) {
     let json = await response.text();
     json = JSON.parse(json);
 
+    if (json.permissions.includes("noUninstall")) {
+      throw "invalidAppPermissionError";
+    }
+
     var prompt = document.getElementById("clockwork-prmpt").cloneNode(true);
     prompt.id = "installprompt-"+(Math.ceil(Math.random()*9999999));
     prompt.className = "clockwork-panel clockwork-panel-fadein";
@@ -440,6 +444,13 @@ function uninstallApp(app) {
   if (app == null || app == undefined) {
     throw "app ID is undefined";
   }
+  var entry = appData.find(function(o) {
+    return o.url == app
+  })
+  if (entry.permissions.includes("noUninstall")) {
+    alert("Cannot uninstall app!");
+    throw "noUninstallAppError";
+  }
   var ask = confirm("Are you sure you want to uninstall this app?");
   if (ask == true) {
     let index = apps.indexOf(app);
@@ -448,9 +459,6 @@ function uninstallApp(app) {
       document.getElementById("apppanel:"+app).remove();
       document.getElementById("appbar:"+app).remove();
       document.getElementById("mngapps:"+app).remove();
-      var entry = appData.find(function(o) {
-          return o.url == app
-        })
       if (entry){
         appData.splice(appData.indexOf(entry), 1);
       }
