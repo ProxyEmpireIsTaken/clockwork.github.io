@@ -806,10 +806,11 @@ function checkFinder(str) {
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
-    div.onkeydown = new Function("("+match[i].onclick.toString()+")()");
+    // holy fucking shit WORK DAMN YOU
     div.addEventListener("keydown", function() {
       finder.style = "display: none;"
       finderBox.style = "display: none;"
+      //eval("("+match[i].onclick.toString()+")()")
     });
     finderBox.appendChild(div);
     ++i;
