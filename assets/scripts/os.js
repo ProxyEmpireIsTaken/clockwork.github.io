@@ -240,15 +240,13 @@ async function installApp(url,params) {
         encodedUrl: json.encodedUrl,
         permissions: json.permissions,
       }
-      var thouApp = url;
-      var thouUrl = json.url;
-      var thouEnc = json.encodedUrl;
+      var evaler = `openApp('${url}','${json.url}',${json.encodedUrl})`;
       var myFinderData = {
         searchText: [json.name.toLowerCase()],
         name: json.name,
         icon: json.icon,
         onclick: function() {
-          openApp(thouApp, thouUrl, thouEnc);
+          eval(evaler);
         }
       }
       appData.push(myAppData);
