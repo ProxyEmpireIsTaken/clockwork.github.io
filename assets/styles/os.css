@@ -390,9 +390,15 @@ a:hover {
 
 .finder-box > div {
   padding: 5px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0;
   border-bottom: 1px solid gray;
   transition: 0.2s;
+}
+.finder-box > div:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+.finder-box > div:last-child {
+  border-bottom: none;
 }
 .finder-box > div:hover {
   background-color: gray;
