@@ -360,4 +360,5 @@ a:hover {
   width: 256px;
   max-width: 256px;
   text-align: left;
+  z-index: 99999;
 }
