@@ -370,3 +370,19 @@ a:hover {
   border: 1px solid white;
   transition: 0.2s;
 }
+.finder-box {
+  position: fixed;
+  left: 50vw;
+  bottom: 32px;
+  padding: 1px;
+  height: 100px;
+  transform: translateX(-50%);
+  border: 1px solid gray;
+  background-color: #222;
+  border-radius: 8px;
+  color: white;
+  width: 256px;
+  max-width: 256px;
+  text-align: left;
+  z-index: 99999;
+}
