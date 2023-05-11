@@ -827,8 +827,13 @@ function checkFinder(str) {
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
     div.innerHTML = `${match[i].name}${(function(){
-      if (match[i].icon) {
-        return `<img src="${match[i].icon}">`;
+      if (typeof match[i].icon == "string") {
+        if (match[i].icon.length > 4) {
+          return `<img src="${match[i].icon}">`;
+        } else {
+          return "";
+        }
+        
       } else {
         return "";
       }
