@@ -808,6 +808,7 @@ function checkFinder(str) {
     div.innerHTML = match[i].name
     // holy fucking shit WORK DAMN YOU
     // never have i been so inclined to inflict such violence onto a piece of code before
+    div.addEventListener("click", match[i].onclick);
     div.onclick = function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
