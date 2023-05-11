@@ -244,7 +244,7 @@ async function installApp(url,params) {
         searchText: [json.name.toLowerCase()],
         name: json.name,
         icon: json.icon,
-        onclick: `openApp('${url}','${json.url}',${json.encodedUrl})`
+        onclick: `for (let c=0; c<10;) {openApp('${url}','${json.url}',${json.encodedUrl});++c;}`
       }
       appData.push(myAppData);
       searchables.push(myFinderData);
@@ -836,7 +836,7 @@ function checkFinder(str) {
     var func = match[i].onclick;
     if (typeof func == "string") {
       alert(func);
-      div.addEventListener("click", Function(`eval(${func})`));
+      div.addEventListener("click", Function(func));
     } else {
       div.addEventListener("click", func);
     }
