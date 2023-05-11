@@ -806,14 +806,16 @@ function checkFinder(str) {
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
+
     // holy fucking shit WORK DAMN YOU
     // never have i been so inclined to inflict such violence onto a piece of code before
+    // fucking hell
+    
     div.addEventListener("click", match[i].onclick);
-    div.onclick = function() {
+    div.addEventListener("click", function() {
       finder.style = "display: none;";
       finderBox.style = "display: none;";
-      eval(`(${match[i].onclick.toString()})()`);
-    };
+    });
     finderBox.appendChild(div);
     ++i;
   }
