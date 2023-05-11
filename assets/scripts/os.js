@@ -807,10 +807,10 @@ function checkFinder(str) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
     div.onkeydown = match[i].onclick;
-    div.addEventListener("keydown", function() {
+    /*div.addEventListener("keydown", function() {
       finder.style = "display: none;"
       finderBox.style = "display: none;"
-    });
+    });*/
     finderBox.appendChild(div);
     ++i;
   }
