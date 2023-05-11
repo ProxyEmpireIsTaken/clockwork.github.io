@@ -5,5 +5,6 @@
   "encodedUrl": "yes",
   "icon": "https://cdn.glitch.global/423a0a44-b287-44e4-a45f-9cabc958361c/icons8-shopping-bag-96.png?v=1681585780234",
   "version": "1.0.0",
+  "finderTerms": ["app store","theme store","shop"],
   "permissions": ["installApp","installTheme","noUninstall"]
 }
