@@ -49,7 +49,7 @@ function check(str) {
   for (let i=0; i<searchables.length;) {
     var sub = searchables[i].searchText.slice(0, str.length)
     if (str.contains(sub)) {
-      match.push(searchables[i])
+      match.push(searchables[i]);
     }
     ++i;
   }
@@ -58,7 +58,12 @@ function check(str) {
     ++i;
   }
 }
-check("st")
+try {
+  check("st")
+} catch (e) {
+  alert("ErROR");
+  alert(e);
+}
 
 // ULTRAVIOLET ENCODING AND DECODING
 // THIS IS REQUIRED FOR USING A PROXY
