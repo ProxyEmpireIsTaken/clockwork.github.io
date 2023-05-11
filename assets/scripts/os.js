@@ -781,7 +781,7 @@ window.addEventListener('message', function(event) {
 // onkeypress
 
 document.body.onkeydown = function(e) { 
-  if (e.key == "/") {
+  if (e.ctrlKey && e.key == "/") {
     e.preventDefault();
     finder.style = "display: block;"
     finderBox.style = "display: block;"
