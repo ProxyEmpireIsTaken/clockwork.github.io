@@ -783,7 +783,8 @@ window.addEventListener('message', function(event) {
 document.body.onkeydown = function(e) { 
   if (e.key == "/") {
     e.preventDefault();
-    alert("Finder");
+    finder.style = "display: block;"
+    finderBox.style = "display: block;"
   }
 };
 
@@ -805,7 +806,11 @@ function checkFinder(str) {
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
     div.innerHTML = match[i].name
-    div.onclick = match[i].onclick
+    div.onclick = function() {
+      finder.style = "display: none;"
+      finderBox.style = "display: none;"
+      match[i].onclick();
+    }
     finderBox.appendChild(div);
     ++i;
   }
