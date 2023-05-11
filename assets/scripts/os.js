@@ -44,7 +44,7 @@ const searchables = [
     icon: "none",
   }
 ]
-function check(str) {
+function checkFinder(str) {
   var match = [];
   for (let i=0; i<searchables.length;) {
     var sub = str.slice(0, str.length)
@@ -53,13 +53,18 @@ function check(str) {
     }
     ++i;
   }
+  const box = document.querySelector(".finder-box");
+  box.innerHTML = "";
   for (let i=0; i<match.length;) {
-    document.querySelector(".finder-box").innerHTML += `${match[i].name}<br>`
+    box.innerHTML += `${match[i].name}<br>`
     ++i;
+  }
+  if (box.innerHTML == "") {
+    box.innerHTML = "No results..."
   }
 }
 try {
-  check("st")
+  checkFinder("str")
 } catch (e) {
   alert("ERROR");
   alert(e);
