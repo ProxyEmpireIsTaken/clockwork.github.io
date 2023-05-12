@@ -868,7 +868,7 @@ function checkFinder(str) {
 }
 finder.oninput = function() {
   try {
-    checkFinder(this.value.toLowerCase());
+    checkFinder(finder.value.toLowerCase());
   } catch (e) {
     alert(e);
   }
