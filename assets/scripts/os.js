@@ -811,7 +811,6 @@ document.body.onkeydown = function(e) {
 
 // finder system
 function checkFinder(str) {
-  if (str == undefined) str = "";
   var match = [];
   for (let i=0; i<searchables.length;) {
     for (let i2=0; i2<searchables[i].searchText.length;) {
@@ -824,6 +823,7 @@ function checkFinder(str) {
     }
     ++i;
   }
+  if (typeof str != "string" || str.length < 1) match = searchables;
   finderBox.innerHTML = "";
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
