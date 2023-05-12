@@ -812,18 +812,22 @@ document.body.onkeydown = function(e) {
 // finder system
 function checkFinder(str) {
   var match = [];
-  for (let i=0; i<searchables.length;) {
-    for (let i2=0; i2<searchables[i].searchText.length;) {
-      var sub = str.slice(0, str.length)
-      if (searchables[i].searchText[i2].includes(sub)) {
-        match.push(searchables[i]);
-        break;
+  if (typeof str != "string" || str.length < 1) {
+    match = searchables
+  } else {
+    for (let i=0; i<searchables.length;) {
+      for (let i2=0; i2<searchables[i].searchText.length;) {
+        var sub = str.slice(0, str.length)
+        if (searchables[i].searchText[i2].includes(sub)) {
+          match.push(searchables[i]);
+          break;
+        }
+        ++i2;
       }
-      ++i2;
+      ++i;
     }
-    ++i;
   }
-  if (typeof str != "string" || str.length < 1) match = searchables;
+  
   finderBox.innerHTML = "";
   for (let i=0; i<match.length&&i<12;) {
     var div = document.createElement("div");
