@@ -802,11 +802,22 @@ window.addEventListener('message', function(event) {
 document.body.onkeydown = function(e) { 
   if (e.ctrlKey && e.key == "/") {
     e.preventDefault();
-    finder.className = "finder"
-    finderBox.className = "finder-box"
-    finder.style = "display: block;"
-    finderBox.style = "display: block;"
-    finder.focus();
+    if (finder.className = "finder") {
+      finder.className = "finder invisible";
+      finderBox.className = "finder-box invisible";
+      setTimeout(function() {
+        finder.style = "display: none;";
+        finderBox.style = "display: none;";
+      }, 250);
+      finder.blur();
+    } else {
+      finder.className = "finder"
+      finderBox.className = "finder-box"
+      finder.style = "display: block;"
+      finderBox.style = "display: block;"
+      finder.focus();
+    }
+    
   }
 };
 
