@@ -811,6 +811,7 @@ document.body.onkeydown = function(e) {
 
 // finder system
 function checkFinder(str) {
+  if (str == undefined) str = "";
   var match = [];
   for (let i=0; i<searchables.length;) {
     for (let i2=0; i2<searchables[i].searchText.length;) {
@@ -867,10 +868,6 @@ function checkFinder(str) {
   }
 }
 finder.oninput = function() {
-  try {
-    checkFinder(finder.value.toLowerCase());
-  } catch (e) {
-    alert(e);
-  }
+  checkFinder(finder.value.toLowerCase());
 }
-checkFinder("");
+checkFinder();
