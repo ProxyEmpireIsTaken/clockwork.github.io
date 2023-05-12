@@ -56,6 +56,38 @@ const searchables = [
       openApp('sys_settings_themes');
     },
   },
+  {
+    searchText: ["proxy","unblock","ultraviolet"],
+    name: "Proxy Settings",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
+    onclick: function(){
+      openApp('sys_settings_proxy');
+    },
+  },
+  {
+    searchText: ["passcode settings","password settings","lock settings"],
+    name: "Passcode Settings",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
+    onclick: function(){
+      openApp('sys_settings_passcode');
+    },
+  },
+  {
+    searchText: ["control center settings","time settings","24-hour time","12-hour time"],
+    name: "Control Center Settings",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
+    onclick: function(){
+      openApp('sys_settings_control');
+    },
+  },
+  {
+    searchText: ["version clockwork","clockwork version"],
+    name: "About Clockwork",
+    icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
+    onclick: function(){
+      openApp('sys_about');
+    },
+  },
 ]
 
 
