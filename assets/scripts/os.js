@@ -802,7 +802,7 @@ window.addEventListener('message', function(event) {
 document.body.onkeydown = function(e) { 
   if (e.ctrlKey && e.key == "/") {
     e.preventDefault();
-    if (finder.className = "finder") {
+    if (finder.className == "finder") {
       finder.className = "finder invisible";
       finderBox.className = "finder-box invisible";
       setTimeout(function() {
