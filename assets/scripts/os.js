@@ -157,6 +157,7 @@ document.getElementById("clockwork-content").style = "display: none;";
 // loading screen
 function checkForFinish() {
   if (loadBar.max == loadBar.value) {
+    checkFinder();
   	document.getElementById("clockwork-loading").style = "display: none;";
 		if (settings.lock.enabled == true || settings.lock.enabled == "true") {
       document.getElementById("clockwork-lock").style = "";
@@ -874,4 +875,3 @@ function checkFinder(str) {
 finder.oninput = function() {
   checkFinder(finder.value.toLowerCase());
 }
-checkFinder();
