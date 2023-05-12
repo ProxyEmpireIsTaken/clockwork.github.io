@@ -873,4 +873,4 @@ finder.oninput = function() {
     alert(e);
   }
 }
-checkFinder(finder.value.toLowerCase());
+checkFinder("");
