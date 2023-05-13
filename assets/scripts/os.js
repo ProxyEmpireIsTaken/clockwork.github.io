@@ -798,7 +798,7 @@ function clearAllNotifs() {
 // onkeypress
 function onKeyPress(e) {
   if (e.ctrlKey && e.key == "/") {
-    e.preventDefault();
+    if (!e.isFake) e.preventDefault();
     if (finder.className == "finder") {
       finder.className = "finder invisible";
       finderBox.className = "finder-box invisible";
@@ -926,9 +926,7 @@ window.addEventListener('message', function(event) {
         onKeyPress({
           ctrlKey: true,
           key: "/",
-          get preventDefault() {
-            return true;
-          }
+          isFake: true
         })
       } else if (event.data[1] == "onClick") {
         onClick()
