@@ -712,10 +712,10 @@ function onClick(event) {
   setTimeout(function() {
     contextMenu.style.display = "none";
   }, 250);
-  if (!notificationPanel.contains(event.target.offsetParent) && notificationPanel.className == "visible") {
+  if (event.isFake || (!notificationPanel.contains(event.target.offsetParent) && notificationPanel.className == "visible")) {
     openNotificationPanel();
   }
-  if (!finderBox.contains(event.target.offsetParent)) {
+  if (event.isFake || !finderBox.contains(event.target.offsetParent)) {
     finder.className = "finder invisible";
     finderBox.className = "finder-box invisible";
     setTimeout(function() {
@@ -929,7 +929,9 @@ window.addEventListener('message', function(event) {
           isFake: true
         })
       } else if (event.data[1] == "onClick") {
-        onClick(event.data[2])
+        onClick({
+          isFake: true
+        })
       }
     }
   }
