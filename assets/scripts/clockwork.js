@@ -19,7 +19,7 @@ document.body.addEventListener("keydown", function(e) {
 });
 
 document.body.addEventListener("click", function(e) { 
- window.parent.postMessage(["baseFunc","onClick"], "*");
+ window.parent.postMessage(["baseFunc","onClick",e], "*");
 });
 
 class Clockwork {

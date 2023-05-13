@@ -929,7 +929,7 @@ window.addEventListener('message', function(event) {
           isFake: true
         })
       } else if (event.data[1] == "onClick") {
-        onClick()
+        onClick(event.data[2])
       }
     }
   }
