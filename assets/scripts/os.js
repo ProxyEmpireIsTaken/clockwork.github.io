@@ -712,7 +712,7 @@ function onClick(event) {
   setTimeout(function() {
     contextMenu.style.display = "none";
   }, 250);
-  if (event.isFake || (!notificationPanel.contains(event.target.offsetParent) && notificationPanel.className == "visible")) {
+  if ((event.isFake || !notificationPanel.contains(event.target.offsetParent)) && notificationPanel.className == "visible") {
     openNotificationPanel();
   }
   if (event.isFake || !finderBox.contains(event.target.offsetParent)) {
