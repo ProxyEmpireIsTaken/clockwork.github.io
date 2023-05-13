@@ -57,7 +57,7 @@ const searchables = [
     },
   },
   {
-    searchText: ["proxy","unblock","ultraviolet"],
+    searchText: ["proxy settings","unblock settings","unblocking settings","ultraviolet settings"],
     name: "Proxy Settings",
     icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
     onclick: function(){
@@ -81,7 +81,7 @@ const searchables = [
     },
   },
   {
-    searchText: ["version clockwork","clockwork version"],
+    searchText: ["about clockwork","version clockwork","clockwork version"],
     name: "About Clockwork",
     icon: "https://redstonenw.vercel.app/assets/clockwork/settings.png",
     onclick: function(){
