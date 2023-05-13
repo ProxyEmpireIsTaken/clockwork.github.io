@@ -925,7 +925,10 @@ window.addEventListener('message', function(event) {
       if (event.data[1] == "openFinder") {
         onKeyPress({
           ctrlKey: true,
-          key: "/"
+          key: "/",
+          get preventDefault() {
+            return true;
+          }
         })
       } else if (event.data[1] == "onClick") {
         onClick()
