@@ -707,7 +707,7 @@ const notificationPanel = document.getElementById("clockwork-notification-panel"
 notificationPanel.className = "";
 
 //onclick
-document.querySelector("body").addEventListener("click", (event) => {
+function onClick(event) {
   contextMenu.className = "invisible";
   setTimeout(function() {
     contextMenu.style.display = "none";
@@ -723,7 +723,8 @@ document.querySelector("body").addEventListener("click", (event) => {
       finderBox.style = "display: none;";
     }, 250);
   }
-})
+}
+document.querySelector("body").addEventListener("click", onClick)
 
 //more notif sys
 
@@ -792,46 +793,10 @@ function clearAllNotifs() {
   }, 750);
 }
 
-// clockwork.js functions
-window.addEventListener('message', function(event) {
-  if (event.data.length > 1) {
-    if (event.data[0] == "installApp") {
-      // event.source.frameElement.id.slice(9)
-      if (appData.find(function(o) {
-        return o.url == event.data[3]
-      }).permissions.includes("installApp")) {
-        if (event.data[1] == "installApp") {
-          promptInstallApp(event.data[2], {})
-        }
-      }
-    }
-    if (event.data[0] == "installTheme") {
-      // event.source.frameElement.id.slice(9)
-      if (appData.find(function(o) {
-        return o.url == event.data[3]
-      }).permissions.includes("installTheme")) {
-        if (event.data[1] == "installTheme") {
-          promptInstallTheme(event.data[2])
-        }
-      }
-    }
-    if (event.data[0] == "notifications") {
-      // event.source.frameElement.id.slice(9)
-      var app = appData.find(function(o) {
-        return o.url == event.data[3]
-      });
-      if (app.permissions.includes("notifications")) {
-        if (event.data[1] == "sendNotification") {
-          sendNotification(app.name, event.data[2]);
-        }
-      }
-    }
-  }
-});
+
 
 // onkeypress
-
-document.body.onkeydown = function(e) { 
+function onKeyPress(e) {
   if (e.ctrlKey && e.key == "/") {
     e.preventDefault();
     if (finder.className == "finder") {
@@ -851,6 +816,9 @@ document.body.onkeydown = function(e) {
     }
     
   }
+}
+document.body.onkeydown = function(e) { 
+  onKeyPress(e);
 };
 
 // finder system
@@ -918,3 +886,50 @@ function checkFinder(str) {
 finder.oninput = function() {
   checkFinder(finder.value.toLowerCase());
 }
+
+// clockwork.js functions
+window.addEventListener('message', function(event) {
+  if (event.data.length > 1) {
+    if (event.data[0] == "installApp") {
+      // event.source.frameElement.id.slice(9)
+      if (appData.find(function(o) {
+        return o.url == event.data[3]
+      }).permissions.includes("installApp")) {
+        if (event.data[1] == "installApp") {
+          promptInstallApp(event.data[2], {})
+        }
+      }
+    }
+    if (event.data[0] == "installTheme") {
+      // event.source.frameElement.id.slice(9)
+      if (appData.find(function(o) {
+        return o.url == event.data[3]
+      }).permissions.includes("installTheme")) {
+        if (event.data[1] == "installTheme") {
+          promptInstallTheme(event.data[2])
+        }
+      }
+    }
+    if (event.data[0] == "notifications") {
+      // event.source.frameElement.id.slice(9)
+      var app = appData.find(function(o) {
+        return o.url == event.data[3]
+      });
+      if (app.permissions.includes("notifications")) {
+        if (event.data[1] == "sendNotification") {
+          sendNotification(app.name, event.data[2]);
+        }
+      }
+    }
+    if (event.data[0] == "baseFunc") {
+      if (event.data[1] == "openFinder") {
+        onKeyPress({
+          ctrlKey: true,
+          key: "/"
+        })
+      } else if (event.data[1] == "onClick") {
+        onClick()
+      }
+    }
+  }
+});
