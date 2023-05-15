@@ -8,12 +8,12 @@ if (document.location.pathname.startsWith("/get-started")) {
   <!DOCTYPE html>
   <html>
   <body>
-  <iframe src="${btoa(url)}"></iframe>
+  <iframe src="about:blank" id="${btoa(url)}"></iframe>
   <style>
   * {margin: 0; padding: 0;}iframe {width: 100%;height: 100vh;border: none;}
   </style>
   <script>
-  document.querySelector("iframe").src = atob(document.querySelector("iframe").src);
+  document.querySelector("iframe").src = atob(document.querySelector("iframe").id);
   </script>
   </body>
   </html>`
