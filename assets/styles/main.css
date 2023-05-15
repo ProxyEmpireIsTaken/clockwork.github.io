@@ -111,10 +111,11 @@ details[open] summary ~ * {
 }
 details > summary {
   display: block;
-  color: white;
+  color: #f88;
   text-align: center;
   font-size: 30px;
   margin-bottom: 1em;
+  font-family: "Varela Round", Arial, sans-serif;
   transition: 0.2s;
 }
 details[open] > summary {
