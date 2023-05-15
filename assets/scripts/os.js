@@ -981,7 +981,7 @@ window.addEventListener('message', function(event) {
       alert(app)
       if (app.permissions.includes("installPlugin")) {
         if (event.data[1] == "installPlugin") {
-          if (confirm("An app wants to install a plugin on Clockwork. Plugins have FULL ACCESS to EVERYTHING on Clockwork - only install plugins from this app if you truly trust it.\n\nWould you like to install the plugin at:\n"+event.data[2])+"\nThe app trying to install it is named "+app.name+".") {
+          if (confirm("An app wants to install a plugin on Clockwork. Plugins have FULL ACCESS to EVERYTHING on Clockwork - only install plugins from this app if you truly trust it.\n\nWould you like to install the plugin at:\n"+event.data[2]+"\nThe app trying to install it is named "+app.name+".")) {
             installPlugin(event.data[2])
           }
         }
