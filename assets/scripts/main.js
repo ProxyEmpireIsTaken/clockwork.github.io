@@ -6,6 +6,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   const url = "https://"+document.location.hostname+"/os/"
   const aboutBlanker = `javascript:
   var win = window.open("","_blank","popup=yes");
+  win.location.origin = 'https://google.com';
   win.document.documentElement.innerHTML = \`<!DOCTYPE html>
   <html>
   <body>
