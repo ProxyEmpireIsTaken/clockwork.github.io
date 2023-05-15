@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex&family=Varela+Round&display=swap');
+@keyframes detailsopen {
+  0%    {opacity: 0; margin-left: -10px}
+100%  {opacity: 1; margin-left: 0px}
+}
 
 body {
   background-color: black;
@@ -100,6 +104,9 @@ a:link {
 a:hover {
   color: #f88;
   transition: 0.2s;
+}
+details[open] summary ~ * {
+  animation: detailsopen .5s ease-in-out;
 }
 .letsgo {
   font-size: 7vw;
