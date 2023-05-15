@@ -110,9 +110,11 @@ details[open] summary ~ * {
   animation: detailsopen .5s ease-in-out;
 }
 details > summary {
+  display: block;
   color: white;
   text-align: center;
   font-size: 30px;
+  margin-bottom: 1em;
   transition: 0.2s;
 }
 details[open] > summary {
