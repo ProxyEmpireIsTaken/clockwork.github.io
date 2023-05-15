@@ -266,6 +266,10 @@ function installPlugin(url) {
   var script = document.createElement("script");
   script.src = url;
   document.body.appendChild(script);
+  if (!plugins.contains(url)) {
+    plugins.push(url);
+    localStorage.setItem("plugins", JSON.stringify(plugins));
+  }
 }
 
 // apps
