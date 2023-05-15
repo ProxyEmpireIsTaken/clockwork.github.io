@@ -109,6 +109,16 @@ details[open] summary ~ * {
   position: relative;
   animation: detailsopen .5s ease-in-out;
 }
+details > summary {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  transition: 0.2s;
+}
+details[open] > summary {
+  color: red;
+  transition: 0.2s;
+}
 summary::marker {
   content: "";
 }
