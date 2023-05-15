@@ -109,7 +109,7 @@ details[open] summary ~ * {
   position: relative;
   animation: detailsopen .5s ease-in-out;
 }
-details::before {
+summary::marker {
   content: "";
 }
 .letsgo {
