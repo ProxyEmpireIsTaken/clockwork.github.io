@@ -36,6 +36,16 @@ body {
   box-sizing: border-box;
   background-color: #111;
 }
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Varela Round", Arial, sans-serif;
+  text-align: center;
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: #f88;
+}
 p {
   padding-left: 25vw;
   padding-right: 25vw;
