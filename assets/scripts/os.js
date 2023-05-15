@@ -4,6 +4,7 @@ const appBar = document.getElementById("appbar");
 const loadBar = document.getElementById("cw-load-bar");
 const finder = document.querySelector(".finder");
 const finderBox = document.querySelector(".finder-box");
+
 const yes = true;
 const no = false;
 
@@ -12,6 +13,7 @@ var currentApp = "home";
 var apps = null;
 var appData = [];
 var themes = null;
+var plugins = null;
 
 // Version numbers for v1 use BASE.FEATURE.PATCH, with FEATURE combining MAJOR and MINOR.
 
@@ -171,10 +173,18 @@ document.getElementById("set_proxyurl").value = settings.proxyUrl;
 
 // get themes
 if (localStorage.getItem("themes") == null || localStorage.getItem("themes") == "!!reset") {
-  localStorage.setItem("themes", JSON.stringify(new Array()));
+  localStorage.setItem("themes", JSON.stringify([]));
   themes = [];
 } else {
   themes = JSON.parse(localStorage.getItem("themes"));
+}
+
+// get plugins
+if (localStorage.getItem("plugins") == null || localStorage.getItem("plugins") == "!!reset") {
+  localStorage.setItem("plugins", JSON.stringify([]));
+  plugins = [];
+} else {
+  plugins = JSON.parse(localStorage.getItem("plugins"));
 }
 
 // get apps
@@ -190,7 +200,7 @@ if (localStorage.getItem("apps") == null || localStorage.getItem("apps") == "!!r
   apps = JSON.parse(localStorage.getItem("apps"));
 }
 
-loadBar.max = apps.length + themes.length;
+loadBar.max = apps.length + themes.length + plugins.length;
 loadBar.value = 0;
 for (let i = 0; i < apps.length; i++) {
   installApp(apps[i], {start: true});
@@ -198,6 +208,10 @@ for (let i = 0; i < apps.length; i++) {
 for (let i = 0; i < themes.length; i++) {
   installTheme(themes[i]);
   ++loadBar.value;
+}
+
+for (let i = 0; i < plugins.length; i++) {
+  installPlugin(plugins[i]);
 }
 
 document.getElementById("clockwork-content").style = "display: none;";
@@ -246,6 +260,15 @@ sideBarClock();
 setInterval(sideBarClock, 500);
 
 // main stuff
+
+// plugins
+function installPlugin(url) {
+  var script = document.createElement("script");
+  script.src = url;
+  document.body.appendChild(script);
+}
+
+// apps
 async function installApp(url,params) {
   if (url === null | url === undefined) {
     url = prompt("ID is undefined or null, enter a URL (or leave blank to cancel)");
