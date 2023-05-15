@@ -7,15 +7,15 @@ body {
   padding: 0;
   margin: 0;
 }
-.banner {
+.home-banner {
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/images/banner.webp");
+  background-image: url("/assets/images/banner.svg");
   background-color: black;
   background-size: cover;
   background-position: 50%;
 }
-.banner > span {
+.home-banner > span {
   margin: 0;
   position: absolute;
   top: 10px;
