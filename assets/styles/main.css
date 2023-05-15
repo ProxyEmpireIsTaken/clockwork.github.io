@@ -32,7 +32,7 @@ body {
 .content {
   font-size: 20px;
   padding-top: 6px;
-  min-height: calc(100vh - 38px);
+  min-height: calc(100vh - 37px);
 }
 .navbar {
   width: 100%;
