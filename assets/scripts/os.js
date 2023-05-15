@@ -280,8 +280,7 @@ function uninstallPlugin(url) {
     if (confirm("Are you sure you would like to uninstall this plugin? Clockwork will have to restart!")) {
       plugins.splice(found, 1);
       localStorage.setItem("plugins", JSON.stringify(plugins));
-      alert(plugins)
-      //document.location.reload();
+      document.location.reload();
     }
   } else {
     alert("ERROR: Plugin does not exist!")
