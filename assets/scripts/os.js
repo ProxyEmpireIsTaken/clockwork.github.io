@@ -276,7 +276,7 @@ function installPlugin(url) {
 
 function uninstallPlugin(url) {
   var found = plugins.indexOf(url);
-  if (found) {
+  if (typeof found) {
     if (confirm("Are you sure you would like to uninstall this plugin? Clockwork will have to restart!")) {
       plugins = plugins.splice(found, 1);
       localStorage.setItem("plugins", JSON.stringify(plugins));
