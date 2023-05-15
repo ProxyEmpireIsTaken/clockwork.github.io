@@ -9,7 +9,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   win.document.body.innerHTML = \`<!DOCTYPE html>
   <html>
   <body>
-  <iframe src="\${atob(${btoa(url)})}"></iframe>
+  <iframe src="\${atob('${btoa(url)}')}"></iframe>
   <style>
   * {margin: 0; padding: 0;}iframe {width: 100%;height: 100vh;border: none;}
   </style>
