@@ -16,7 +16,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   document.querySelector("iframe").src = atob(document.querySelector("iframe").src);
   </script>
   </body>
-  </html>\`)`
+  </html>`
   const aboutBlanker = `javascript:
   var win = window.open("","_blank","popup=yes");
   win.location.origin = 'https://google.com';
