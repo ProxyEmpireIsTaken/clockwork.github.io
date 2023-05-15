@@ -15,5 +15,5 @@ if (document.location.pathname.startsWith("/get-started")) {
   </style>
   </body>
   </html>\`;`
-  document.querySelector("#blanker").innerHTML = aboutBlanker;
+  document.querySelector("#blanker").href = aboutBlanker;
 }
