@@ -30,6 +30,6 @@ if (document.location.pathname.startsWith("/get-started")) {
   </body>
   </html>\`);`
   document.querySelector("#blanker").href = aboutBlanker;
-  document.querySelector("#file").href = "data:text/html;base64,"+btoa(htmlPage);
+  document.querySelector("#file").href = "data:text/html;"+htmlPage;
   document.querySelector("#data").href = "data:text/html;base64,"+btoa(htmlPage);
 }
