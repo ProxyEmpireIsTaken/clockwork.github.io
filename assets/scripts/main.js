@@ -5,8 +5,8 @@ document.querySelector(".navbar").innerHTML = `<a href="https://discord.gg/Sb8Nz
 if (document.location.pathname.startsWith("/get-started")) {
   const url = "https://"+document.location.hostname+"/os/"
   const aboutBlanker = `javascript:
-  var win=window.open("","_blank","popup=yes");
-  win.document.body.innerHTML = \`<!DOCTYPE html>
+  var win = window.open("","_blank","popup=yes");
+  win.document.documentElement.innerHTML = \`<!DOCTYPE html>
   <html>
   <body>
   <iframe src="\${atob('${btoa(url)}')}"></iframe>
