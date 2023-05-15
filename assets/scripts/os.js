@@ -212,6 +212,7 @@ for (let i = 0; i < themes.length; i++) {
 
 for (let i = 0; i < plugins.length; i++) {
   installPlugin(plugins[i]);
+  ++loadBar.value;
 }
 
 document.getElementById("clockwork-content").style = "display: none;";
