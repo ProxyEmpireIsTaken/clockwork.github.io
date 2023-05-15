@@ -266,7 +266,7 @@ function installPlugin(url) {
   var script = document.createElement("script");
   script.src = url;
   document.body.appendChild(script);
-  if (!plugins.contains(url)) {
+  if (!plugins.includes(url)) {
     plugins.push(url);
     localStorage.setItem("plugins", JSON.stringify(plugins));
   }
