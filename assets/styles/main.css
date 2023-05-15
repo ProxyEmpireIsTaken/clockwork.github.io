@@ -109,6 +109,9 @@ details[open] summary ~ * {
   position: relative;
   animation: detailsopen .5s ease-in-out;
 }
+details::before {
+  content: "";
+}
 .letsgo {
   font-size: 7vw;
   padding: 0;
