@@ -267,7 +267,7 @@ function installPlugin(url) {
   var script = document.createElement("script");
   script.src = url;
   document.body.appendChild(script);
-  document.getElementById("cw_manageplugins_span").innerHTML += url+"<br>"
+  document.getElementById("cw_manageplugins_span").innerHTML += `${url} - <a onclick="uninstallApp(${url})">Uninstall</a><br>`
   if (!plugins.includes(url)) {
     plugins.push(url);
     localStorage.setItem("plugins", JSON.stringify(plugins));
