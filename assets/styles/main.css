@@ -116,6 +116,7 @@ details > summary {
   text-align: center;
   font-size: 30px;
   margin-bottom: 1em;
+  user-select: none;
   font-family: "Varela Round", Arial, sans-serif;
   transition: 0.2s;
 }
