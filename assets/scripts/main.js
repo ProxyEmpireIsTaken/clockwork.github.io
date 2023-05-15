@@ -15,7 +15,6 @@ if (document.location.pathname.startsWith("/get-started")) {
   * {margin: 0; padding: 0;}iframe {width: 100%;height: 100vh;border: none;}
   </style>
   </body>
-  </html>\`);
-  document.location.reload();`
+  </html>\`);`
   document.querySelector("#blanker").href = aboutBlanker;
 }
