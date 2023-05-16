@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://black_hole-3kf-1-v0606342.deta.app/api/photo/vy2a2wqymg2s.png" align="center">
+  <img src="https://black_hole-3kf-1-v0606342.deta.app/api/photo/vb2xd6rwbarc.png" align="center">
 </p>
 
 <h4 align="center">
@@ -26,7 +26,10 @@
 </p>
 
 <p align="center">
-  This section is currently blank - help us out by contributing!
+  You can deploy the Clockwork website to pretty much any hosting service out there that supports either static web hosting or Docker. This includes Render, Vercel, Netlify, Glitch, Replit, Stormkit, Hop, Github/Gitlab Pages, Kinsta, and more.
+</p>
+<p align="center">
+  If you start having trouble, we suggest you ask in the Discord.
 </p>
 
 <!-- FOOTER -->
