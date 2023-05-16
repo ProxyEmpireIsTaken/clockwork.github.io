@@ -9,7 +9,7 @@
 
 <!-- ABOUT SECTION -->
 <p align="center">
-  <img src="https://black_hole-3kf-1-v0606342.deta.app/api/photo/1voy2a2j6jd1.png" align="center">
+  <img src="https://black_hole-3kf-1-v0606342.deta.app/api/photo/kfsbywrgp46y.png" align="center">
 </p>
 
 <p align="center">
