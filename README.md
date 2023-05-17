@@ -26,7 +26,10 @@
 </p>
 
 <p align="center">
-  You can deploy the Clockwork website to pretty much any hosting service out there that supports either static web hosting or Docker. This includes Render, Vercel, Netlify, Glitch, Replit, Stormkit, Hop, Github/Gitlab Pages, Kinsta, and more.
+  You can deploy the Clockwork website to pretty much any hosting service out there that supports either static web hosting or Docker. This includes Render, Vercel, Netlify, Glitch, Replit, Stormkit, Hop, Github/Gitlab Pages, and more.
+</p>
+<p align="center">
+  You can also use <a href="https://freedns.afraid.org/">FreeDNS</a> to get free subdomains (only if you have a home computer, also don't use the short ones because most are taken)
 </p>
 <p align="center">
   If you start having trouble, we suggest you ask in the Discord.
