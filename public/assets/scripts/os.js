@@ -951,6 +951,8 @@ finder.oninput = function() {
 
 // clockwork.js functions
 window.addEventListener('message', function(event) {
+  console.log("HELLO!")
+  console.log(event.data);
   if (event.data.length > 1) {
     if (event.data[0] == "installApp") {
       // event.source.frameElement.id.slice(9)
