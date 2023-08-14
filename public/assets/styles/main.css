@@ -107,10 +107,14 @@ textarea {
   font-family: 'Courier New', Courier, monospace;
 }
 div.partners {
-  width: 100%;
-  margin: 64px 0;
+  width: calc(100% - 128px);
+  margin: 0 64px;
   background-color:#222;
   border-radius: 20px;
+  box-sizing: border-box;
+}
+div.partners h1 {
+  color: white;
 }
 
 input {
