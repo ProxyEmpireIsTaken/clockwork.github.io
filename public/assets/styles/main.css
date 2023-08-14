@@ -116,6 +116,11 @@ div.partners {
 div.partners h1 {
   color: white;
 }
+div.partners img {
+  width: 128px;
+  height: 128px;
+  border-radius: 16px;
+}
 
 input {
   background-color: #111;
