@@ -112,6 +112,8 @@ div.partners {
   background-color:#222;
   border-radius: 20px;
   box-sizing: border-box;
+  text-align: center;
+  padding: 0.1px;
 }
 div.partners h1 {
   color: white;
