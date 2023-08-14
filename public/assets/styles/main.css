@@ -112,7 +112,7 @@ textarea {
 }
 div.partners {
   width: calc(100% - 128px);
-  margin: 0 64px 16px 64px;
+  margin: 0 64px 96px 64px;
   background-color:#111;
   border-radius: 20px;
   box-sizing: border-box;
