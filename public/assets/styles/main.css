@@ -117,9 +117,10 @@ div.partners h1 {
   color: white;
 }
 div.partners img {
-  width: 128px;
-  height: 128px;
+  width: 256px;
+  height: 256px;
   border-radius: 16px;
+  padding: 0.1px 32px 32px;
 }
 
 input {
