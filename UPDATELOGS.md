@@ -1,5 +1,7 @@
 # 2.0.0.0-beta15
 
+> - REMOVED: Herobrine
+
 # 2.0.0.0-beta14
 
 > - ADDED: Revamped Settings app - now all in one app!
