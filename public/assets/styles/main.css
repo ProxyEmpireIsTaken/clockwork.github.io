@@ -30,7 +30,6 @@ body {
   text-align: center;
   font-family: "Varela Round", Arial, sans-serif;
   font-size: 3vw;
-  backdrop-filter: blur(2px);
   border-radius: 24px;
 }
 .content {
