@@ -109,7 +109,7 @@ textarea {
 div.partners {
   width: calc(100% - 128px);
   margin: 0 64px;
-  background-color:#222;
+  background-color:#111;
   border-radius: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -118,11 +118,13 @@ div.partners {
 div.partners h1 {
   color: white;
 }
-div.partners img {
-  width: 256px;
-  height: 256px;
+div.partners div {
   border-radius: 16px;
   padding: 0.1px 16px 32px;
+}
+div.partners div img {
+  width: 256px;
+  height: 256px;
 }
 
 input {
