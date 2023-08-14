@@ -60,46 +60,6 @@ p {
   padding-left: 25vw;
   padding-right: 25vw;
 }
-div.withimgleft,div.withimgright {
-  display: block;
-  padding: 6px 10px;
-  position: relative;
-  height: 100vh;
-}
-div.withimgleft > img {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  max-height: 100vh;
-  object-fit: cover;
-  transform: translateY(-50%);
-}
-div.withimgleft > div {
-  width: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-div.withimgright > img {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  max-height: 100vh;
-  object-fit: cover;
-  transform: translateY(-50%);
-}
-div.withimgright > div {
-  width: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
 a {
   color: #9B0022;
 }
