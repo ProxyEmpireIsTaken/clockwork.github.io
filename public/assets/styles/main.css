@@ -13,15 +13,20 @@ body {
   padding: 0;
   margin: 0;
 }
-.home-banner {
+.banner {
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/images/home-page/banner.svg");
   background-color: black;
   background-size: cover;
   background-position: 50%;
 }
-.home-banner > span {
+.banner.home {
+  background-image: url("/assets/images/home-page/banner.svg");
+}
+.banner.bogos {
+  background-image: url("/assets/images/home-page/bogos.svg");
+}
+.banner.home > span {
   margin: 0;
   position: absolute;
   top: 50%;
