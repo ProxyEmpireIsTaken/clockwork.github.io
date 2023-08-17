@@ -236,7 +236,7 @@ progress::-webkit-progress-value {
   background-color: black;
 }
 
-.clockwork-panel div {
+.clockwork-panel > div {
   text-align: center;
   position: fixed;
   font-size: 24px;
@@ -645,12 +645,13 @@ a:hover {
 }
 
 div.setup-screen {
+  top: 100vh;
   transition: 0.8s;
   width: 75vw;
   background-color: #c51d4d;
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: -50%;
   transform: translate(-50%, -50%);
   padding: 32px;
   z-index: 99999999;
@@ -677,6 +678,7 @@ div.setup-screen {
 div.setup-screen.visible {
   transition: 0.8s;
   opacity: 1;
+  top: 50%;
 }
 
 div.setup-screen btn {
