@@ -34,9 +34,9 @@ body {
   outline: 1px rgba(128,128,128,0.5) solid;
   box-sizing: border-box;
   text-align: center;
-  height: calc(100% - 72px);
+  height: calc(60%);
   left: 50%;
-  top: 36px;
+  top: calc(20% + 16px);
   backdrop-filter: blur(50px);
   padding: 4px;
   font-size: 24px;
