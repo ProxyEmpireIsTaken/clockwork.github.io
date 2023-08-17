@@ -412,8 +412,8 @@ function setupScreenSwap(screen) {
   var children = document.querySelectorAll("div.setup-screen");
   let i = 0;
   while (i != children.length) {
-    if (children[i].id == "setup-screen-"+screen) children[i].style.className = "setup-screen visible"
-    else children[i].style.className = "setup-screen";
+    if (children[i].id == "setup-screen-"+screen) children[i].className = "setup-screen visible"
+    else children[i].className = "setup-screen";
     i++;
   }
 }
