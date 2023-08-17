@@ -658,6 +658,9 @@ div.setup-screen {
   opacity: 0;
 }
 
+#setup-screen-apps {  background-color: #3c1dc5;  }
+#setup-screen-proxy {  background-color: #c5c21d;  }
+
 .apps-to-install {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
