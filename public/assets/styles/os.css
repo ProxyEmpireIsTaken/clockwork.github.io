@@ -599,3 +599,13 @@ div.setup-screen.visible {
 div.setup-screen btn {
   font-size: 30px;
 }
+
+div.setup-screen a:link {
+  font-size: 17px;
+  color: #301;
+}
+
+div.setup-screen a:hover {
+  font-size: 17px;
+  color: #fff;
+}
