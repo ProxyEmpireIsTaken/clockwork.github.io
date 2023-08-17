@@ -58,6 +58,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   document.querySelector("iframe").src = atob(
     document.querySelector("iframe").id
   );
+  window.onbeforeunload = function (event) { return false };
   </script>
   </body>
   </html>`.replace(/\n/g,"").replace(/  /g,"");
@@ -70,6 +71,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   <body>
   <iframe src="\${atob('${btoa(url)}')}"></iframe>
   <style>* {margin: 0;padding: 0;overflow-y: hidden;}iframe {width: 100%;height: 100vh;border: none;}</style>
+  <script>window.onbeforeunload = function (event) { return false };</script>
   </body>
   </html>\`);`
   document.querySelector("#blanker").href = aboutBlanker;
