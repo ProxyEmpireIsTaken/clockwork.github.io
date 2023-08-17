@@ -674,6 +674,7 @@ div.setup-screen {
 .apps-to-install div img {
   float: left;
   height: 32px;
+  border-radius: 8px;
 }
 
 div.setup-screen.visible {
