@@ -39,6 +39,13 @@ body {
   backdrop-filter: blur(50px);
   padding: 4px;
 }
+.banner.bogos div p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .banner.home > span {
   margin: 0;
   position: absolute;
