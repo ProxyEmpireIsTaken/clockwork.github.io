@@ -579,3 +579,14 @@ a:hover {
   background-color: rgba(128,128,128,0.65);
   transition: 0.2s;
 }
+
+div.setup-screen {
+  transition: 0.8s;
+  width: 75vw;
+  background-color: #c51d4d;
+  position: fixed;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  z-index: 99999999;
+}
