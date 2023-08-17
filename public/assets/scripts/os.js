@@ -418,6 +418,10 @@ function setupScreenSwap(screen) {
   }
 }
 
+function closeSetupScreen() {
+  
+}
+
 // The stuff that you can search up using the Finder
 const searchables = [{
   searchText: ["prefs", "preferences"],
@@ -617,7 +621,10 @@ function checkForFinish() {
   if (loadBar.max == loadBar.value) {
     checkFinder();
     document.getElementById("clockwork-loading").style = "display: none;";
-    if (settings.lock.enabled == true || settings.lock.enabled == "true") {
+    if (firstBoot) {
+      document.getElementById("clockwork-setup").style = "";
+      setupScreenSwap("welcome")
+    } else if (settings.lock.enabled == true || settings.lock.enabled == "true") {
       document.getElementById("clockwork-lock").style = "";
       document.getElementById("clockwork-lock").className = "clockwork-panel clockwork-panel-fadein";
       pcodeInput.focus();
