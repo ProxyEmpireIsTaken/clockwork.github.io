@@ -36,7 +36,7 @@ body {
   text-align: center;
   height: calc(60%);
   left: 50%;
-  top: calc(20% + 16px);
+  top: 20%;
   backdrop-filter: blur(50px);
   padding: 4px;
   font-size: 24px;

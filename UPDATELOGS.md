@@ -1,6 +1,9 @@
 # 2.0.0.0-beta15
+> - ADDED: Part 2 of the redesign - redesigning all the main pages
 
 > - REMOVED: Herobrine
+
+> - PLANNED: Setup screen when first booting up Clockwork
 
 # 2.0.0.0-beta14
 
