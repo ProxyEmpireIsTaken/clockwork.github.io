@@ -26,6 +26,15 @@ body {
 .banner.bogos {
   background-image: url("/assets/images/home-page/bogos.svg");
 }
+.banner.bogos div {
+  width: calc(50% - 24px);
+  margin: 0 50% 96px 24;
+  background-color:#111;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.1px;
+}
 .banner.home > span {
   margin: 0;
   position: absolute;
