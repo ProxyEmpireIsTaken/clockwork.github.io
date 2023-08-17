@@ -44,7 +44,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: t
+}
+.banner.bogos div p a {
+  display: block;
+  font-size: 24px;
 }
 .banner.home > span {
   margin: 0;
