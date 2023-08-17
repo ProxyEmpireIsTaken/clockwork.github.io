@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+/* test */
 
 @keyframes detailsopen {
   0%    {opacity: 0; left: -10px}
@@ -38,6 +39,7 @@ body {
   top: 36px;
   backdrop-filter: blur(50px);
   padding: 4px;
+  font-size: 24px;
 }
 .banner.bogos div p {
   margin: 0;
@@ -45,11 +47,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: calc(100% - 32px);
 }
-.banner.bogos div p a {
+.banner.bogos div p a.big {
   display: block;
-  font-size: 24px;
+  font-size: 48px;
 }
 .banner.home > span {
   margin: 0;
