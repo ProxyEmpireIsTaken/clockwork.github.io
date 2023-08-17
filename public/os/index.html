@@ -49,7 +49,7 @@
 
     <div>
       <h1>
-        Welcome.
+        Welcome back!
       </h1>
       For your security, please enter your passcode.<br><br>
       <input type="password" maxlength="6" id="passcode">
@@ -59,11 +59,26 @@
 
   <span id="clockwork-setup" class="clockwork-panel" style="display: none;">
 
-    <div class="setup-screen hidden">
+    <div class="setup-screen visible" id="setup-screen-welcome">
       <h1>
         Welcome to Clockwork
       </h1>
-      <p>Please pick your ser</p>
+      <p>
+        Thanks for picking Clockwork! For best experience, we suggest you use our setup to get the most common apps installed.
+      </p>
+      <btn onclick="setupScreenSwap('apps')">Continue</btn><br>
+      <a href="javascript:void(0)" onclick="">...or skip the setup</a>
+    </div>
+
+    <div class="setup-screen" id="setup-screen-apps">
+      <h1>
+        Install some apps
+      </h1>
+      <p>
+        Thanks for picking Clockwork! For best experience, we suggest you use our setup to get the most common apps installed.
+      </p>
+      <btn onclick="setupScreenSwap('apps')">Continue</btn><br>
+      <a href="javascript:void(0)" onclick="">...or skip the setup</a>
     </div>
 
   </span>

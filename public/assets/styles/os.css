@@ -589,4 +589,13 @@ div.setup-screen {
   transform: translate(-50%, -50%);
   padding: 32px;
   z-index: 99999999;
+  opacity: 0;
+}
+div.setup-screen.visible {
+  transition: 0.8s;
+  opacity: 1;
+}
+
+div.setup-screen btn {
+  font-size: 30px;
 }
