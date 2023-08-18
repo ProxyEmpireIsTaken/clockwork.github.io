@@ -695,7 +695,7 @@ div.setup-screen > a:link {
   font-size: 17px;
 }
 
-div.setup-screen a:link {
+div.setup-screen a:link, div.setup-screen a:visited {
   color: #100003;
 }
 
