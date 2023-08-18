@@ -317,7 +317,8 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
         }
         localStorage.clear();
         alert("Successfully reset Clockwork. Reloading...");
-        window.onbeforeunload = function (event) { };
+        
+        window.onbeforeunload = function (event) { }; // this makes it so it doesn't reload
         document.location.reload();
       }
       div.appendChild(btn);
