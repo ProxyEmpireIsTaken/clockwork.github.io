@@ -31,3 +31,9 @@ class Clockwork {
     return false;
   }
 }
+
+document.addEventListener('keypress', function() {
+  if (e.ctrlKey && e.key == "/") {
+    window.parent.postMessage(["base","openFinder",url,clockwork_my_id], "*");
+  }
+})

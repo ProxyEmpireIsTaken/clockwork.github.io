@@ -1554,7 +1554,7 @@ window.addEventListener('message', function (event) {
         }
       }
     }
-    if (event.data[0] == "baseFunc") {
+    if (event.data[0] == "base") {
       if (event.data[1] == "openFinder") {
         onKeyPress({
           ctrlKey: true,
