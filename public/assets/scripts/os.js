@@ -412,14 +412,19 @@ function setupScreenSwap(screen) {
   var children = document.querySelectorAll("div.setup-screen");
   let i = 0;
   while (i != children.length) {
-    if (children[i].id == "setup-screen-"+screen) children[i].className = "setup-screen visible"
+    if (children[i].id == "setup-screen-" + screen) children[i].className = "setup-screen visible"
     else children[i].className = "setup-screen";
     i++;
   }
 }
 
-function closeSetupScreen() {
-  
+function setupScreenClose() {
+  setupScreenSwap("");
+  document.getElementById("clockwork-setup").className = "clockwork-panel clockwork-panel-fadeout";
+  document.getElementById("clockwork-content").style = "";
+  setTimeout(function () {
+    document.getElementById("clockwork-setup").style = "display: none;"
+  }, 300);
 }
 
 // The stuff that you can search up using the Finder
