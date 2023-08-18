@@ -301,6 +301,35 @@ const settingsMenu = [{
       div.appendChild(btn);
 
       var btn = document.createElement("btn");
+      btn.innerText = "Export"
+      btn.onclick = function () {
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.cws,.json'
+
+        input.onchange = e => {
+          var file = e.target.files[0];
+          file.text().then((text) => {
+            var json = JSON.parse(text);
+            if (!json?.settings) {
+              alert("Invalid JSON, aborting!");
+              return;
+            }
+
+            localStorage.setItem("settings", JSON.stringify(json.settings));
+            localStorage.setItem("apps", JSON.stringify(json.apps))
+            localStorage.setItem("themes", JSON.stringify(json.themes))
+
+            window.onbeforeunload = function (event) { }; // this makes it so it doesn't reload
+            document.location.reload();
+          })
+        }
+
+        input.click();
+      }
+      div.appendChild(btn);
+
+      var btn = document.createElement("btn");
       btn.innerText = "Factory Reset"
       btn.onclick = function () {
         if (prompt(`WAIT A MINUTE!
@@ -317,7 +346,7 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
         }
         localStorage.clear();
         alert("Successfully reset Clockwork. Reloading...");
-        
+
         window.onbeforeunload = function (event) { }; // this makes it so it doesn't reload
         document.location.reload();
       }
