@@ -659,7 +659,7 @@ function checkForFinish() {
     } else {
       document.getElementById("clockwork-content").style = "";
       sendNotification("Welcome to Clockwork", "Clockwork is currently running " + version)
-      sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it!")
+      sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it if you haven't!")
     }
   } else {
     setTimeout(checkForFinish, 500);
@@ -1234,7 +1234,7 @@ pcodeInput.oninput = function () {
         document.getElementById("clockwork-lock").style = "display: none;"
       }, 300);
       sendNotification("Welcome to Clockwork", "Clockwork is currently running " + version)
-      sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it!")
+      sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it if you haven't!")
     } else {
       pcodeInput.value = "";
     }
