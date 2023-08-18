@@ -658,8 +658,8 @@ div.setup-screen {
   opacity: 0;
 }
 
-#setup-screen-apps {  background-color: #3c1dc5;  }
-#setup-screen-proxy {  background-color: #c5c21d;  }
+#setup-screen-apps {  background-color: #1dc593;  }
+#setup-screen-proxy {  background-color: #c51dc5;  }
 
 .apps-to-install {
   display: grid;
