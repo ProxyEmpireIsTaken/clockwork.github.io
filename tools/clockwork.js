@@ -22,4 +22,8 @@ class Clockwork {
   sendNotification(description) {
     window.parent.postMessage(["notifications","sendNotification",description,clockwork_my_id], "*");
   }
+
+  requestFullscreen(url) {
+    window.parent.postMessage(["base","requestFullscreen",url,clockwork_my_id], "*");
+  }
 }
