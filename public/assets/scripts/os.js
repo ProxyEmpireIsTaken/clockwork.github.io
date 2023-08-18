@@ -281,7 +281,7 @@ const settingsMenu = [{
     type: "scriptbox",
     value: function (div) {
       div.innerHTML = `<p>
-          This is a tool that allows you to import and export all the data stored in Clockwork. Exporting will export your data in a .cws file, which can be imported easily. Importing will require a .cws file, and will force-restart Clockwork.
+          This is a tool that allows you to import and export all the data stored in Clockwork. Exporting will export your data in a .cws file, which can be imported easily. Importing will require a .cws file, and will force-restart Clockwork. Also here is a Factory Reset option, which should only be used as a last resort (and will require your passcode.)
           </p>`
       var btn = document.createElement("btn");
       btn.innerText = "Export"
