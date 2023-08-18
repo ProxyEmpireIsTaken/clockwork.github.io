@@ -301,7 +301,7 @@ const settingsMenu = [{
       div.appendChild(btn);
 
       var btn = document.createElement("btn");
-      btn.innerText = "Export"
+      btn.innerText = "Import"
       btn.onclick = function () {
         var input = document.createElement('input');
         input.type = 'file';
