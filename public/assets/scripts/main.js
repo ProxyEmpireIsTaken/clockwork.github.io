@@ -54,7 +54,7 @@ if (document.location.pathname.startsWith("/get-started")) {
     border: none;
   }
   </style>
-  <script src="//${document.location.hostname}/assets/scripts/hidden-name.js"></script>
+  <script src="https://${document.location.hostname}/assets/scripts/hidden-name.js"></script>
   <script>
   document.querySelector("iframe").src = atob(
     document.querySelector("iframe").id
