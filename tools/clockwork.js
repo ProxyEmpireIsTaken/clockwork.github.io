@@ -23,7 +23,11 @@ class Clockwork {
     window.parent.postMessage(["notifications","sendNotification",description,clockwork_my_id], "*");
   }
 
+  // no permissions required for the following variables and functions
   requestFullscreen(url) {
     window.parent.postMessage(["base","requestFullscreen",url,clockwork_my_id], "*");
+  }
+  get isActiveApp() {
+    return false;
   }
 }
