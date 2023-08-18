@@ -299,6 +299,27 @@ const settingsMenu = [{
         dlBtn.remove();
       }
       div.appendChild(btn);
+
+      var btn = document.createElement("btn");
+      btn.innerText = "Factory Reset"
+      btn.onclick = function () {
+        if (prompt(`WAIT A MINUTE!
+        
+Factory resets will remove ALL your data from Clockwork, including apps, themes and more. We highly suggest you export your data before you do this. To confirm you want to reset, type "factory reset" into the box below.`).toLowerCase() != "factory reset") {
+          alert("Aborting!")
+          return;
+        }
+        if (settings.lock.enabled) {
+          if (prompt("Please enter your old passcode to confirm.") != settings.lock.passcode) {
+            alert("Incorrect passcode!")
+            return;
+          }
+        }
+        localStorage.clear();
+        alert("Successfully reset Clockwork. Reloading...");
+        document.location.reload();
+      }
+      div.appendChild(btn);
     }
   }
   ]
