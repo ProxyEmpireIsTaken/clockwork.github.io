@@ -152,7 +152,7 @@ select {
   cursor: pointer;
   display: inline-block;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(36, 36, 36, 0.2);
   color: #fff;
   padding: 4px 4px;
   border-radius: 4px;
@@ -659,7 +659,7 @@ div.setup-screen {
 }
 
 #setup-screen-apps {  background-color: #3c1dc5;  }
-#setup-screen-proxy {  background-color: #929016;  }
+#setup-screen-proxy {  background-color: #c5c21d;  }
 
 .apps-to-install {
   display: grid;
@@ -678,6 +678,7 @@ div.setup-screen {
   float: left;
   height: 32px;
   border-radius: 8px;
+  margin-right: 4px;
 }
 
 div.setup-screen.visible {
