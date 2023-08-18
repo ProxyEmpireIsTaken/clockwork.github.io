@@ -3,6 +3,7 @@
 > - ADDED: Factory reset option is here again, in Import & Export settings
 > - ADDED: Setup screen when first booting up Clockwork
 > - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github repos (will attempt to get from multiple CDNs.) You can add Github urls like this: `"github.com/username/repo@optional-branch/path/to/needed/file"`
+> - ADDED: Added Import button to Import & Export settings
 
 > - REMOVED: Herobrine
 
