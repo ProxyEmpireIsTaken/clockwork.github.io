@@ -54,6 +54,7 @@ if (document.location.pathname.startsWith("/get-started")) {
     border: none;
   }
   </style>
+  <script src="//${document.location.hostname}/assets/scripts/hidden-name.js"></script>
   <script>
   document.querySelector("iframe").src = atob(
     document.querySelector("iframe").id
@@ -66,14 +67,7 @@ if (document.location.pathname.startsWith("/get-started")) {
   const aboutBlanker = `javascript:
   var win = window.open("","_blank","popup=yes");
   win.location.origin = 'https://google.com';
-  win.document.write(\`<!DOCTYPE html>
-  <html>
-  <body>
-  <iframe src="\${atob('${btoa(url)}')}"></iframe>
-  <style>* {margin: 0;padding: 0;overflow-y: hidden;}iframe {width: 100%;height: 100vh;border: none;}</style>
-  <script>window.onbeforeunload = function (event) { return false };</script>
-  </body>
-  </html>\`);`
+  win.document.write(\`${htmlPage}\`);`
   document.querySelector("#blanker").href = aboutBlanker;
   document.querySelector("#file").href = "data:text/html,"+htmlPage;
   document.querySelector("#file2").href = "data:text/html,"+htmlPage;
