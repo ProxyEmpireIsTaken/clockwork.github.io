@@ -801,6 +801,10 @@ async function installApp(url, params) {
     throw "ID is undefined or null";
   }
   try {
+    if (url.startsWith("@")) {
+      var check = url.match(/@gh\/([a-zA-Z0-9\-_]{1,50})\/([a-zA-Z0-9\-_]{1,50})@([a-zA-Z0-9\-_]{1,50})\/(([^\/]+\/{0,1})+)/);
+      url = currentCDN.replace("%g")
+    }
     let response = await fetch(url, {
       cache: "reload",
       mode: "cors",
