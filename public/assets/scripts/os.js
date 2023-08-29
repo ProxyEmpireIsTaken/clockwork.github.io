@@ -802,8 +802,11 @@ async function installApp(url, params) {
   }
   try {
     if (url.startsWith("@")) {
-      var check = url.match(/@gh\/([a-zA-Z0-9\-_]{1,50})\/([a-zA-Z0-9\-_]{1,50})@([a-zA-Z0-9\-_]{1,50})\/(([^\/]+\/{0,1})+)/);
-      url = currentCDN.replace("%g")
+      var check = url.match(/@(g[hl])\/([a-zA-Z0-9\-_]{1,50})\/([a-zA-Z0-9\-_]{1,50})@([a-zA-Z0-9\-_]{1,50})\/(([^\/]+\/{0,1})+)/);
+      url = currentCDN
+        .replace("%g", url[1]).replace("%u", url[2])
+        .replace("%r", url[2]).replace("%b", url[3])
+        .replace("%p", url[4])
     }
     let response = await fetch(url, {
       cache: "reload",
