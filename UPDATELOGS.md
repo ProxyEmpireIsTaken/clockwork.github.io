@@ -2,7 +2,7 @@
 > - ADDED: Part 2 of the redesign - redesigning all the display pages
 > - ADDED: Factory reset option is here again, in Import & Export settings
 > - ADDED: Setup screen when first booting up Clockwork
-> - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github and Gitlab repos. PLEASE USE THIS FOR MOST APPS, it'll keep your apps from getting blocked or broken: `"@github/username/repo@optional-branch/path/to/needed/file"` `"@gitlab/username/repo@optional-branch/path/to/needed/file"`
+> - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github and Gitlab repos. PLEASE USE THIS FOR MOST APPS, it'll keep your apps from getting blocked or broken for most users: `"gh/username/repo@branch/path/to/needed/file"` `"gl/username/repo@branch/path/to/needed/file"` (branch is required!)
 > - ADDED: Added Import button to Import & Export settings
 
 > - CHANGED: Clockwork App Guidelines have been updated

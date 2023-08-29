@@ -575,6 +575,26 @@ function decodeUV(str) {
   return decodeURIComponent(input).split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join('') + (search.length ? '?' + search.join('?') : '');
 }
 
+const cdns = [
+  [
+    "https://cdn.statically.io/%g/mrdoob/three.js/dev/build/three.min.js",
+    "https://cdn.statically.io/%g/%u/%r/%b/%p"
+  ],
+  [
+    "https://cdn.jsdelivr.net/gh/mrdoob/three.js@dev/build/three.min.js",
+    "https://cdn.jsdelivr.net/%g/%u/%r@%b/%p"
+  ],
+  [
+    "https://%Gcdn.githack.com/mrdoob/three.js/dev/build/three.min.js",
+    "https://%Gcdn.githack.com/%g/%u/%r/%b/%p"
+  ]
+]
+var currentCDN = null;
+
+function cleanUrl(url) {
+  return url
+}
+
 var defaultSettings = {
   // Lock screen settings
   lock: {
@@ -653,23 +673,38 @@ if (localStorage.getItem("apps") == null || localStorage.getItem("apps") == "!!r
   apps = JSON.parse(localStorage.getItem("apps"));
 }
 
-loadBar.max = apps.length + themes.length + plugins.length;
+loadBar.max = apps.length + themes.length + plugins.length + 1;
 loadBar.value = 0;
-for (let i = 0; i < apps.length; i++) {
-  installApp(apps[i], {
-    start: true
-  });
-}
-var themeData = [];
-for (let i = 0; i < themes.length; i++) {
-  installTheme(themes[i]);
-  ++loadBar.value;
-}
 
-for (let i = 0; i < plugins.length; i++) {
-  installPlugin(plugins[i]);
-  ++loadBar.value;
+function checkCDN(i) {
+  let response = fetch(cdns[i][0], {
+    cache: "reload",
+    mode: "cors",
+  }).then((response) => {
+    if (response.ok) {
+      currentCDN = cdns[i][1]
+      ++loadBar.value
+      for (let i = 0; i < apps.length; i++) {
+        installApp(apps[i], {
+          start: true
+        });
+      }
+      var themeData = [];
+      for (let i = 0; i < themes.length; i++) {
+        installTheme(themes[i]);
+        ++loadBar.value;
+      }
+
+      for (let i = 0; i < plugins.length; i++) {
+        installPlugin(plugins[i]);
+        ++loadBar.value;
+      }
+    } else {
+      checkCDN(++i)
+    }
+  })
 }
+checkCDN(0)
 
 document.getElementById("clockwork-content").style = "display: none;";
 
