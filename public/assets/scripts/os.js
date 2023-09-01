@@ -390,17 +390,17 @@ if (document.location.href.endsWith("?debug")) {
       value: function (div) {
         var btn = document.createElement("btn") 
         btn.innerText = "Eval"
-        btn.onclick = function() { var a = alert(); eval(a) }
+        btn.onclick = function() { var a = prompt(); eval(a) }
         div.appendChild(btn);
 
         var btn = document.createElement("btn") 
         btn.innerText = "Install app"
-        btn.onclick = function() { var a = alert("json url"); promptInstallApp(a) }
+        btn.onclick = function() { var a = prompt("json url"); promptInstallApp(a) }
         div.appendChild(btn);
 
         var btn = document.createElement("btn") 
         btn.innerText = "Install theme"
-        btn.onclick = function() { var a = alert("css url"); promptInstallTheme(a) }
+        btn.onclick = function() { var a = prompt("css url"); promptInstallTheme(a) }
         div.appendChild(btn);
       }
     }]
