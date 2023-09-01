@@ -395,7 +395,7 @@ function sideBarClock() {
   else if (settings.clockFont == "varela") document.getElementById('appsidebar-clock').style.fontFamily = '"Varela Round", sans-serif'
   else document.getElementById('appsidebar-clock').style.fontFamily = 'monospace';
 
-  if (settings.dyslexicFont) {
+  if (settings.dyslexicFont == "true") {
     document.body.style.fontFamily = "OpenDyslexic, Dyslexic, sans-serif"
     document.getElementById('appsidebar-clock').style.fontFamily = 'OpenDyslexic, Dyslexic, sans-serif';
   } else {
