@@ -391,6 +391,17 @@ if (document.location.href.endsWith("?debug")) {
         var btn = document.createElement("btn") 
         btn.innerText = "Eval"
         btn.onClick = function() { eval(alert()) }
+        div.appendChild(btn);
+
+        var btn = document.createElement("btn") 
+        btn.innerText = "Install app"
+        btn.onClick = function() { promptInstallApp(alert("App's json url")) }
+        div.appendChild(btn);
+
+        var btn = document.createElement("btn") 
+        btn.innerText = "Install theme"
+        btn.onClick = function() { promptInstallTheme(alert("Theme's css url")) }
+        div.appendChild(btn);
       }
     }]
   },)
