@@ -1082,9 +1082,7 @@ function uninstallApp(app) {
       document.getElementById("apppanel:" + app).remove();
       document.getElementById("appbar:" + app).remove();
       document.getElementById("mngapps:" + app).remove();
-      if (entry) {
-        appData.splice(appData.indexOf(entry), 1);
-      }
+      appData.splice(appData.indexOf(entry), 1);
     }
     localStorage.setItem("apps", JSON.stringify(apps));
   }
