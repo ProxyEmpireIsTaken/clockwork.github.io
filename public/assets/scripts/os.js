@@ -391,12 +391,16 @@ function sideBarClock() {
   m = checkTime(m);
   s = checkTime(s);
 
-  if (settings.dyslexicFont) document.body.style = "font-family: OpenDyslexic, Dyslexic, sans-serif !important"
-  else document.body.style = 'font-family: "Asap", "Roboto Flex", Roboto, sans-serif';
-
   if (settings.clockFont == "asap") document.getElementById('appsidebar-clock').style.fontFamily = '"Asap", sans-serif'
   else if (settings.clockFont == "varela") document.getElementById('appsidebar-clock').style.fontFamily = '"Varela Round", sans-serif'
-  else document.getElementById('appsidebar-clock').style.fontFamily = 'monospace'
+  else document.getElementById('appsidebar-clock').style.fontFamily = 'monospace';
+
+  if (settings.dyslexicFont) {
+    document.body.style.fontFamily = "OpenDyslexic, Dyslexic, sans-serif"
+    document.getElementById('appsidebar-clock').style.fontFamily = 'OpenDyslexic, Dyslexic, sans-serif';
+  } else {
+    document.body.style.fontFamily = '"Asap", "Roboto Flex", Roboto, sans-serif'
+  };
 
   if (settings.clockType == "12h") {
     if (h > 12) {
