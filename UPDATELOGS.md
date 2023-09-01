@@ -8,7 +8,7 @@
 > - ADDED: Dyslexia-friendly font face in Settings
 
 > - CHANGED: Clockwork App Guidelines have been updated
-> - CHANGED: Updated Clockwork's loading screen (you'll be seeing it for a lot longer with the new update, so might as well make it pretty, right?)
+> - CHANGED: Updated Clockwork's loading screen (you'll be seeing it for longer with the new update, so might as well make it pretty, right?)
 
 > - BUGFIX: Apps could not be uninstalled
 
