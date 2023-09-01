@@ -129,6 +129,15 @@ const settingsMenu = [{
       div.appendChild(paper);
     }
   },
+  {
+    label: "Dyslexia-friendly font face",
+    type: "dropdown",
+    linkedSetting: "settings.dyslexiaFont",
+    values: [
+      ["false", "Off"],
+      ["true", "On"]
+    ]
+  },
   ]
 },
 {

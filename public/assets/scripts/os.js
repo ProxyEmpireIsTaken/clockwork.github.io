@@ -253,6 +253,7 @@ var defaultSettings = {
   },
   clockType: "12h",
   clockFont: "asap",
+  dyslexicFont: false,
   // Proxy settings
   proxy: "none",
   proxyUrl: "",
@@ -282,9 +283,8 @@ if (localStorage.getItem("settings") == null || localStorage.getItem("settings")
 }
 
 // make sure all required settings for clockwork are there
-if (!settings.wallpaper) {
-  settings.wallpaper = "/assets/images/wallpapers/default.png";
-  settings.clockFont = "asap";
+if (settings.dyslexicFont == null) {
+  settings.dyslexicFont = false
   localStorage.setItem("settings", JSON.stringify(settings));
 }
 
@@ -384,11 +384,13 @@ setTimeout(checkForFinish, 500);
 // sidebar clock
 function sideBarClock() {
   const today = new Date();
-  let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
+
+  if (settings.dyslexiaFont) document.body.style.fontFamily = "OpenDyslexic, Dyslexic, sans-serif"
+  else document.body.style.fontFamily = "";
 
   if (settings.clockFont == "asap") document.getElementById('appsidebar-clock').style.fontFamily = '"Asap", sans-serif'
   else if (settings.clockFont == "varela") document.getElementById('appsidebar-clock').style.fontFamily = '"Varela Round", sans-serif'
