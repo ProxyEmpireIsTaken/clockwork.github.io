@@ -218,6 +218,10 @@ const cdns = [
     "https://cdn.statically.io/%g/%u/%r/%b/%p"
   ],
   [
+    "https://cdn.jsdelivr.net/gh/mrdoob/three.js@dev/build/three.min.js",
+    "https://cdn.jsdelivr.net/%g/%u/%r@%b/%p"
+  ],
+  [
     "https://rawcdn.githack.com/mrdoob/three.js/dev/build/three.min.js",
     "https://%Gcdn.githack.com/%u/%r/%b/%p"
   ]
