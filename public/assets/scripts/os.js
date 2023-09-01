@@ -606,11 +606,11 @@ function decodeUV(str) {
 
 const cdns = [
   [
-    "https://cdn.statically.io/%g/mrdoob/three.js/dev/build/three.min.js",
+    "https://cdn.statically.io/gh/mrdoob/three.js/dev/build/three.min.js",
     "https://cdn.statically.io/%g/%u/%r/%b/%p"
   ],
   [
-    "https://%Gcdn.githack.com/mrdoob/three.js/dev/build/three.min.js",
+    "https://rawcdn.githack.com/mrdoob/three.js/dev/build/three.min.js",
     "https://%Gcdn.githack.com/%g/%u/%r/%b/%p"
   ]
 ]
