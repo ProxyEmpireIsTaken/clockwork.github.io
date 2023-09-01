@@ -953,7 +953,7 @@ async function installApp(url, params) {
 }
 
 async function promptInstallApp(url, params) {
-  let response = await fetch(url, {
+  let response = await fetch(cleanUrl(url), {
     cache: "reload",
     mode: "cors",
   });
@@ -1167,6 +1167,7 @@ async function reloadThemes() {
 }
 
 async function installTheme(url) {
+  url = cleanUrl(url)
   if (url === null | url === undefined) {
     url = prompt("ID is undefined or null, enter a URL (or leave blank to cancel)");
   }
@@ -1269,7 +1270,7 @@ async function uninstallTheme(app) {
 }
 
 async function promptInstallTheme(url) {
-  let response = await fetch(url, {
+  let response = await fetch(cleanUrl(url), {
     cache: "reload",
     mode: "cors",
   });
