@@ -306,7 +306,7 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
   screenContents: [{
     type: "scriptbox",
     value: function (div) {
-      div.innerHTML = `v${version} at ${document.location.hostname}<br>
+      div.innerHTML = `v${version} ${versionNickname} at ${document.location.hostname}<br>
           Running ${navigator.userAgent}<br>
           <br>
           <h2>Credits</h2>

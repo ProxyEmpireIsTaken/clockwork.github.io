@@ -37,6 +37,7 @@ var plugins = null;
 // PATCH is backwards-compatible changes for security and bug fixes only
 
 var version = "2.0.0.0-beta15-indev";
+var versionNickname = "New Shoe"
 
 contextMenu.style.display = "none";
 
@@ -372,7 +373,7 @@ function checkForFinish() {
       pcodeInput.focus();
     } else {
       document.getElementById("clockwork-content").style = "";
-      sendNotification("Welcome to Clockwork", "Clockwork is currently running " + version)
+      sendNotification("Welcome to Clockwork", "Clockwork is currently running " + version + " " + versionNickname)
       sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it if you haven't!")
     }
   } else {
