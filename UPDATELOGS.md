@@ -4,6 +4,7 @@
 > - ADDED: Setup screen when first booting up Clockwork
 > - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github and Gitlab repos. PLEASE USE THIS FOR MOST APPS, it'll keep your apps from getting blocked or broken for most users: `"gh/username/repo@branch/path/to/needed/file"` `"gl/username/repo@branch/path/to/needed/file"` (branch is required!)
 > - ADDED: Added Import button to Import & Export settings
+> - ADDED: Debug mode - add ?debug to end of url of /os or html file
 
 > - CHANGED: Clockwork App Guidelines have been updated
 

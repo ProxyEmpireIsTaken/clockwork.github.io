@@ -58,7 +58,9 @@ if (document.location.pathname.startsWith("/get-started")) {
   <script>
   document.querySelector("iframe").src = atob(
     document.querySelector("iframe").id
-  );
+  ) + (function () {
+    if (document.location.href.endsWith("?debug")) return "?debug" else return ""
+  })();
   window.onbeforeunload = function (event) { return false };
   </script>
   </body>
