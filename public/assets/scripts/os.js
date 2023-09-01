@@ -404,7 +404,7 @@ if (document.location.href.endsWith("?debug")) {
         div.appendChild(btn);
       }
     }]
-  },)
+  })
 }
 
 function loadSettingsScreen(prescreen) {
