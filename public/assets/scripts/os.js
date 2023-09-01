@@ -623,7 +623,7 @@ var currentCDN = null;
 function cleanUrl(url) {
   if (url[0] == "@") {
     var result = url.match(/@(gh|gl)\/([a-zA-Z_\-0-9]+)\/([a-zA-Z_\-0-9]+)@([a-zA-Z_\-0-9]+)\/([\/a-zA-Z_\-0-9]+)/)
-    url = currentCDN
+    return currentCDN
       .replace("%G", (function () {
         if (result[1] == "gh") return "raw"
         else return "gl"
@@ -990,7 +990,7 @@ async function promptInstallApp(url, params) {
 
     document.body.appendChild(prompt);
   } else {
-    var retry = confirm("HTTP error while getting app data: " + response.status + "\nApp url: " + url + "\nRetry?");
+    var retry = confirm("HTTP error while getting app data: " + response.status + "\nApp url: " + cleanUrl(url) + "\nRetry?");
     if (retry == true) {
       promptInstallApp(url, params);
     }
