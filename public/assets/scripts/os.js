@@ -391,7 +391,7 @@ function sideBarClock() {
   m = checkTime(m);
   s = checkTime(s);
 
-  if (settings.dyslexiaFont) document.body.style.fontFamily = "OpenDyslexic, Dyslexic, sans-serif"
+  if (settings.dyslexicFont) document.body.style.fontFamily = "OpenDyslexic, Dyslexic, sans-serif"
   else document.body.style.fontFamily = "";
 
   if (settings.clockFont == "asap") document.getElementById('appsidebar-clock').style.fontFamily = '"Asap", sans-serif'

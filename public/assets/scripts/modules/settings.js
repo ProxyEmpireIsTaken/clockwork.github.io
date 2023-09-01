@@ -132,7 +132,7 @@ const settingsMenu = [{
   {
     label: "Dyslexia-friendly font face",
     type: "dropdown",
-    linkedSetting: "settings.dyslexiaFont",
+    linkedSetting: "settings.dyslexicFont",
     values: [
       [false, "Off"],
       [true, "On"]
