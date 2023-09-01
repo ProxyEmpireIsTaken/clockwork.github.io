@@ -611,14 +611,14 @@ const cdns = [
   ],
   [
     "https://rawcdn.githack.com/mrdoob/three.js/dev/build/three.min.js",
-    "https://%Gcdn.githack.com/%g/%u/%r/%b/%p"
+    "https://%Gcdn.githack.com/%u/%r/%b/%p"
   ]
 ]
 var currentCDN = null;
 
 function cleanUrl(url) {
   if (url[0] == "@") {
-    var result = url.match(/@(gh|gl)\/([a-zA-Z_\-0-9]+)\/([a-zA-Z_\-0-9]+)@([a-zA-Z_\-0-9]+)\/([\/a-zA-Z_\-0-9]+)/)
+    var result = url.match(/@(gh|gl)\/([a-zA-Z_\-0-9]+)\/([a-zA-Z_\-0-9]+)@([a-zA-Z_\-0-9]+)\/(.+)/)
     return currentCDN
       .replace("%G", (function () {
         if (result[1] == "gh") return "raw"
@@ -628,7 +628,7 @@ function cleanUrl(url) {
       .replace("%u", result[2])
       .replace("%r", result[3])
       .replace("%b", result[4])
-      .replace("%p", result[4])
+      .replace("%p", result[5])
   }
   return url
 }
