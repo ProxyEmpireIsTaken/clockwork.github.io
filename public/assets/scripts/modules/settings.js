@@ -134,8 +134,8 @@ const settingsMenu = [{
     type: "dropdown",
     linkedSetting: "settings.dyslexiaFont",
     values: [
-      ["false", "Off"],
-      ["true", "On"]
+      [false, "Off"],
+      [true, "On"]
     ]
   },
   ]
