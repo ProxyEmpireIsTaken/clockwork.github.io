@@ -2,7 +2,7 @@
 > - ADDED: Part 2 of the redesign - redesigning all the display pages
 > - ADDED: Factory reset option is here again, in Import & Export settings
 > - ADDED: Setup screen when first booting up Clockwork
-> - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github and Gitlab repos. Branch is required, you can also replace gh with gl to use Gitlab. PLEASE USE THIS FOR YOUR APPS! `"gh/username/repo@branch/path/to/needed/file"`
+> - ADDED: Clockwork's store and apps now has a special behavior for getting files from Github and Gitlab repos. Branch is required, you can also replace gh with gl to use Gitlab. PLEASE USE THIS FOR YOUR APPS! `@gh/username/repo@branch/path/to/your/file`
 > - ADDED: Added Import button to Import & Export settings
 > - ADDED: Debug mode - add ?debug to end of url of /os or html file
 > - ADDED: Dyslexia-friendly font face in Settings
