@@ -592,6 +592,19 @@ const cdns = [
 var currentCDN = null;
 
 function cleanUrl(url) {
+  if (url[0] == "@") {
+    var result = url.match(/@(gh|gl)\/([a-zA-Z_\-0-9]+)\/([a-zA-Z_\-0-9]+)@([a-zA-Z_\-0-9]+)\/([\/a-zA-Z_\-0-9]+)/)
+    url = currentCDN
+      .replace("%G", (function () {
+        if (result[1] == "gh") return "raw"
+        else return "gl"
+      })())
+      .replace("%g", result[1])
+      .replace("%u", result[2])
+      .replace("%r", result[3])
+      .replace("%b", result[4])
+      .replace("%p", result[4])
+  }
   return url
 }
 
