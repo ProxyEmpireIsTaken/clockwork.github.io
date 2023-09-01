@@ -40,12 +40,6 @@ var version = "2.0.0.0-beta15-indev";
 
 contextMenu.style.display = "none";
 
-if (document.location.href.endsWith("?debug")) {
-  window.onerror = function(e) {
-    alert(e)
-  }
-}
-
 Number.prototype.clamp = function (min, max) {
   return Math.min(Math.max(this, min), max)
 }
@@ -383,6 +377,24 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
 },
 ]
 var settingsCurrentScreen = null;
+
+if (document.location.href.endsWith("?debug")) {
+  window.onerror = function (e) {
+    alert(e)
+  }
+  settingsMenu.push({
+    screenName: "Debug Mode",
+    screenIcon: "/assets/images/ui/clockwork.png",
+    screenContents: [{
+      type: "scriptbox",
+      value: function (div) {
+        var btn = document.createElement("btn") 
+        btn.innerText = "Eval"
+        btn.onClick = function() { eval(alert()) }
+      }
+    }]
+  },)
+}
 
 function loadSettingsScreen(prescreen) {
   var screen = typeof prescreen == "string" ?
