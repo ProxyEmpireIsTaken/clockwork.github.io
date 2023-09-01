@@ -384,7 +384,7 @@ setTimeout(checkForFinish, 500);
 // sidebar clock
 function sideBarClock() {
   const today = new Date();
-  let m = today.getHours();
+  let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
   h = checkTime(h);
