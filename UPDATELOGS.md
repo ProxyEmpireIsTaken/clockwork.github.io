@@ -7,6 +7,8 @@
 
 > - CHANGED: Clockwork App Guidelines have been updated
 
+> - BUGFIX: Apps could not be uninstalled
+
 > - REMOVED: Herobrine
 
 # 2.0.0.0-beta14

@@ -40,8 +40,10 @@ var version = "2.0.0.0-beta15-indev";
 
 contextMenu.style.display = "none";
 
-window.onerror = function(e) {
-  alert(e)
+if (document.location.href.endsWith("?debug")) {
+  window.onerror = function(e) {
+    alert(e)
+  }
 }
 
 Number.prototype.clamp = function (min, max) {
